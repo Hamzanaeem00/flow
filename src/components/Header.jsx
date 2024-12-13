@@ -39,7 +39,7 @@ export default function Header() {
           </NavLink>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className=" md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('about')}
               className="text-white hover:text-gray-300 transition-colors"

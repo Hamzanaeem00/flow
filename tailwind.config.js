@@ -7,10 +7,12 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xs': {'min': '320px', 'max': '540px'},
-        'mid-xs': {'min': '540px', 'max': '768px'}, 
-        'large-xs': {'min': '768px', 'max': '960px'},
-        'mid-xl': {'min': '1170px'},
+        'xs': { 'min': '320px', 'max': '480px' }, // Extra small screens (e.g., small phones)
+        'sm': { 'min': '481px', 'max': '768px' }, // Small screens (e.g., phones)
+        'md': { 'min': '769px', 'max': '1024px' }, // Medium screens (e.g., tablets)
+        'lg': { 'min': '1025px', 'max': '1366px' }, // Large screens (e.g., laptops)
+        'xl': { 'min': '1367px', 'max': '1600px' }, // Extra large screens (e.g., desktops)
+        '2xl': { 'min': '1601px' }, // Ultra-wide screens (e.g., large monitors)
       },
       colors: {
         aqua: "#49F7F3",
