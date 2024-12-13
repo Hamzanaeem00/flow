@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import social from "../assets/images/socialimage.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
 import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon
-import here from "../assets/images/here.png";
+import emoji from "../assets/images/pink.png";
 
 const SocialBanner = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,6 +67,7 @@ const SocialBanner = () => {
             </span>
             <div className="grid grid-cols-12 gap-4 items-center p-8 lg:hidden xl:hidden 2xl:hidden">
               {/* Left Icon */}
+              <img src={emoji} alt="" />
               <div className="col-span-1 flex items-center justify-center cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

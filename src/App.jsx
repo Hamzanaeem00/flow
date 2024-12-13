@@ -13,7 +13,7 @@ function App() {
     <>
       <div className='font-inter'>
        <Home />
-       {/* <About /> */}
+       <About />
        {/* <Services /> */}
        {/* <Portfolio /> */}
        {/* <Faq /> */}
