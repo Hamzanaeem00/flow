@@ -1,9 +1,10 @@
-import { Instagram, Music, Play } from 'lucide-react'
+import { ChevronDown, ChevronDownCircle, Instagram, Music, Play } from 'lucide-react'
 import React, { useState } from 'react'
 import social from '../assets/images/socialimage.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon
 import { faPlay } from '@fortawesome/free-solid-svg-icons'; // Import the specific icon
-import svg from '../assets/images/socialsvg.svg'
+import here from '../assets/images/here.png'
+
 
 const SocialBanner = () => {
       const [isPlaying, setIsPlaying] = useState(false)
@@ -42,12 +43,29 @@ const SocialBanner = () => {
           </div>  
         </div>
 
-        <div>
-            <img src={svg} alt="" />
-        </div>
 
 
-        
+<div className="grid grid-cols-12 gap-4 items-center p-8">
+      {/* Left Icon */}
+      <div className="col-span-1 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-16 bg-punk bg-aqua p-5  rounded-full ">
+  <path fill-rule="evenodd" d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z" clip-rule="evenodd" />
+  <path fill-rule="evenodd" d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z" clip-rule="evenodd" />
+</svg>
+
+      </div>
+
+      {/* Text Content */}
+      <div className="col-span-11">
+        <h1 className="text-4xl ">
+          <span className="relative text-9xl flex">
+            world starts{" "}
+          <img src={here} alt="" className='mx-2 mt-2' width="400px" />
+          </span>
+        </h1>
+      </div>
+    </div>
+   
     </div>
   )
 }

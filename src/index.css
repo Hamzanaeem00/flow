@@ -53,6 +53,6 @@
 body {
   font-family: inter;
   background: white;
-  max-width: 95vw;
-  margin: auto;
+  /* max-width: 95vw; */
+  /* margin: auto; */
 }

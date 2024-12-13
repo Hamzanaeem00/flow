@@ -26,8 +26,9 @@ export default function Header() {
   }
 
   return (
+    <section className="max-w-[95vw] mx-auto">
     <nav className={
-      `  fixed top-5 min-w-[95vw]  rounded-full  transition-all duration-300
+      `  fixed top-5 min-w-[95vw] mx-auto  rounded-full  transition-all duration-300
       ${isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-black"}`
     }>
       <div className=" px-2 sm:px-2 w-full">
@@ -67,6 +68,7 @@ export default function Header() {
         </div>
       </div>
     </nav>
+    </section>
   )
 }
 
