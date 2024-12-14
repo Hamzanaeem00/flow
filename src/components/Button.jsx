@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const Button = ({text , backgroundColor, textColor, hover, borderRadius }) => {
+const Button = ({
+  text,
+  backgroundColor,
+  textColor,
+  hover,
+  borderRadius,
+  padding,
+}) => {
   return (
-    <button style={{borderRadius: borderRadius}} className={`${backgroundColor} ${textColor}  ${hover} ${borderRadius} px-6 py-3 font-medium `}>{text}</button>
-  )
-}
+    <button
+      style={{ borderRadius: borderRadius }}
+      className={`${backgroundColor} ${textColor}  ${hover} ${borderRadius} ${padding} px-6 py-3 font-medium `}
+    >
+      {text}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
