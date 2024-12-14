@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: "Inter";
   src: url("./assets/font/Inter-Thin.ttf");
@@ -57,8 +56,67 @@ body {
   /* margin: auto; */
 }
 
-.sm-font{
+.sm-font {
   /* font-family: "Playwrite GB S Guides", cursive; */
   font-weight: 400;
   font-style: normal;
 }
+
+/* ==================================== accordion for services  start ======================================== */
+.services-box {
+  margin: 200px 100px;
+}
+/* ====> image section start */
+.happy-customer-card {
+  background-color: #49f7f2;
+  width: 350px;
+  height: 190px;
+  border-radius: 100px;
+}
+.happy-customer-card .child-1 {
+  padding: 45px 0px 0px 60px;
+}
+.happy-customer-card .child-2 {
+  background-color: #ffffff;
+  height: 150px;
+  margin: 20px 20px 20px 0;
+  border-radius: 100px;
+}
+.image-circle{
+  height: 170px;
+  border-radius: 100px;
+  border: 15px solid #ededed;
+}
+.image-rectangle{
+  height: 340px;
+  border-radius: 100px;
+  border: 15px solid #ededed;
+}
+/* ====> image section end */
+
+/* ====> accordion for services start */
+.ant-collapse-icon-position-start {
+  background-color: transparent !important;
+  border-top: 1px solid #d9d9d9 !important;
+  border-radius: 0px !important;
+}
+.ant-collapse {
+  border-radius: 0px !important;
+  border: none !important;
+  border-top: 1px solid #d9d9d9 !important;
+}
+.ant-collapse-header {
+  padding: 15px 2px !important;
+}
+.ant-collapse-content {
+  border-top: none !important;
+}
+.ant-collapse-content > .ant-collapse-content-box {
+  padding: 10px 10px 15px 90px !important;
+}
+.ant-collapse-expand-icon {
+  display: none !important;
+}
+/* ====> accordion for services end  */
+
+/* ==================================== accordion for services  end ======================================== */

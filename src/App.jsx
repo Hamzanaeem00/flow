@@ -14,7 +14,7 @@ function App() {
       <div className='font-inter'>
        <Home />
        <About />
-       {/* <Services /> */}
+       <Services />
        {/* <Portfolio /> */}
        {/* <Faq /> */}
        {/* <Blog /> */}
