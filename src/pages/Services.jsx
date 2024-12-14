@@ -61,13 +61,16 @@ const Services = () => {
 
   return (
     <div className="services-box grid grid-cols-12 gap-4">
-      <div className="col-span-5 xs:col-span-12 sm:col-span-12">
+      <div className="flex xs:justify-center sm:justify-center col-span-5 xs:col-span-12 sm:col-span-12 md:col-span-6">
         <ImageSection />
       </div>
-      <div className="col-span-7 xs:col-span-12 sm:col-span-12">
-        <h2 className="text-6xl font-medium mb-12">
-          Revealing the secrets <br /> of our achievements
+      <div className="col-span-7 xs:col-span-12 sm:col-span-12 md:col-span-6 xs:mt-12 sm:mt-10">
+        <h2 className="text-6xl xs:text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-medium mb-12 xs:mb-4 sm:mb-5">
+          Revealing the secrets{" "}
+          <br className="xs:hidden sm:hidden md:hidden lg:hidden" /> of our
+          achievements
         </h2>
+
         <div>
           <Collapse
             expandIconPosition="start"
@@ -81,7 +84,7 @@ const Services = () => {
                   onClick={preventCollapse} // Prevent collapse when clicking the icon and label
                 >
                   {/* Left icon */}
-                  <div className="mr-12">
+                  <div className="mr-12 xs:mr-2 sm:mr-3 md:mr-4 lg:mr-8">
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#ededed]">
                       {item.leftIcon}
                     </div>

@@ -76,18 +76,21 @@ body {
 .happy-customer-card .child-1 {
   padding: 45px 0px 0px 60px;
 }
+/* ====> white circle  */
 .happy-customer-card .child-2 {
   background-color: #ffffff;
   height: 150px;
   margin: 20px 20px 20px 0;
   border-radius: 100px;
 }
-.image-circle{
+/* ====> circle typpe box for image */
+.image-circle {
   height: 170px;
   border-radius: 100px;
   border: 15px solid #ededed;
 }
-.image-rectangle{
+/* ====> rectangle type box for image */
+.image-rectangle {
   height: 340px;
   border-radius: 100px;
   border: 15px solid #ededed;
@@ -97,8 +100,6 @@ body {
 /* ====> accordion for services start */
 .ant-collapse-icon-position-start {
   background-color: transparent !important;
-  border-top: 1px solid #d9d9d9 !important;
-  border-radius: 0px !important;
 }
 .ant-collapse {
   border-radius: 0px !important;
@@ -107,6 +108,7 @@ body {
 }
 .ant-collapse-header {
   padding: 15px 2px !important;
+  cursor: auto !important;
 }
 .ant-collapse-content {
   border-top: none !important;
@@ -120,8 +122,6 @@ body {
 /* ====> accordion for services end  */
 
 /* ======================================== services page end =========================================== */
-
-
 
 @keyframes leftToRight {
   0% {
@@ -143,3 +143,67 @@ body {
 .scroll-animation.animate {
   animation: leftToRight 1s ease-out forwards;
 }
+
+/* ======================================== media query start =========================================== */
+
+/* Extra small screens (e.g., small phones) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .services-box {
+    margin: 100px 15px;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 10px 10px 15px 50px !important;
+  }
+  .happy-customer-card {
+    width: 300px;
+    height: 160px;
+  }
+  .happy-customer-card .child-1 {
+    padding: 25px 0px 0px 40px;
+  }
+  .happy-customer-card .child-2 {
+    height: 140px;
+    margin: 10px 10px 10px 0;
+  }
+}
+
+/* Small screens (e.g., phones) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .services-box {
+    margin: 120px 25px;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 10px 10px 15px 55px !important;
+  }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .services-box {
+    margin: 140px 35px;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 10px 10px 15px 60px !important;
+  }
+}
+
+/* Large screens (e.g., laptops) */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .services-box {
+    margin: 160px 75px;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 10px 10px 15px 75px !important;
+  }
+}
+
+/* Extra large screens (e.g., desktops) */
+@media (min-width: 1367px) and (max-width: 1600px) {
+  /* Styles for xl */
+}
+
+/* Ultra-wide screens (e.g., large monitors) */
+@media (min-width: 1601px) {
+  /* Styles for 2xl */
+}
+/* ======================================== media query end =========================================== */
