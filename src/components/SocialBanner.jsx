@@ -5,21 +5,46 @@ import {
   Music,
   Play,
 } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import social from "../assets/images/socialimage.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
 import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon
 import emoji from "../assets/images/pink.png";
 import here from "../assets/images/here.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 
 const SocialBanner = () => {
   const [isPlaying, setIsPlaying] = useState(false);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    // Initialize GSAP animation
+    gsap.fromTo(
+      imgRef.current,
+      { x: -200, opacity: 0 }, // Start position (off-screen left)
+      {
+        x: 0, // End position (original position)
+        opacity: 1,
+        duration: 1, // Animation duration
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: imgRef.current, // Element to trigger the animation
+          start: "top 80%", // Start when top of image is 80% down the viewport
+          toggleActions: "play none none none", // Play only when scrolled into view
+        },
+      }
+    );
+  }, []);
+
 
   return (
     <div>
       <div className="  cursor-pointer mt-40  ">
-        <div className=" max-w-[90vw] mx-auto grid grid-cols-12 gap-0 ">
+        <div className=" max-w-[85vw] mx-auto grid grid-cols-12 gap-0 ">
           <div className="col-span-8 lg:col-span-9 md:col-span-12 sm:col-span-12 xs:col-span-12 ">
             {/* Icons  */}
             <div className="icon flex ">
@@ -137,7 +162,12 @@ const SocialBanner = () => {
         <div className="grid grid-cols-12 gap-4 items-center  md:hidden sm:hidden xs:hidden">
               {/* Left Icon */}
               <div className="col-span-2 flex items-center justify-center cursor-pointer">
-              <img src={emoji} alt="" width="160px" className=""  />
+               <img
+      src={emoji}
+      alt="Animated emoji"
+      ref={imgRef}
+      style={{ width: "160px", opacity: 0 }} // Initial opacity for smooth animation
+    />
               <svg
   style={{
     marginLeft: "-20px",
