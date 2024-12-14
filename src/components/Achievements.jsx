@@ -17,16 +17,22 @@ const Achievements = () => {
 
       {/* Stats Section */}
       <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2 xs:grid-cols-1 text-white">
-        {cardsData.map((card, index) => (
-          <Card
-            key={index}
-            stat={card.stat}
-            description={card.description}
-            number={card.number}
-            isLastCard={card.isLastCard || false} // Only the last card gets the decorative element
-          />
-        ))}
-      </div>
+ {cardsData.map((card, index)=> {
+  return (
+    <>
+    <Card
+    key={index}
+    stat={card.stat}
+    description={card.description}
+    number={card.number}
+    isLastCard={card.isLastCard || false} // Only the last card gets the decorative element
+  />
+  </>
+  )
+}
+)}
+</div>
+
 
       {/* Text Section */}
       <div className="mt-16 text-center max-w-4xl mx-auto relative">

@@ -207,3 +207,14 @@ body {
   /* Styles for 2xl */
 }
 /* ======================================== media query end =========================================== */
+
+
+.card-show{
+  display: none;
+  /* mix-blend-mode: darken;   */
+}
+
+.card-img :hover .card-show {
+  transition: ease-in-out 1s;
+   display: block;
+}

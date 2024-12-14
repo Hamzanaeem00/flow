@@ -1,6 +1,6 @@
 import { ChevronDown, ChevronDownCircle, Instagram, Music } from "lucide-react";
 import React, { useEffect, useRef } from "react";
-import emoji from "../assets/images/pinkk.png";
+import emoji from "../assets/images/pink.svg";
 import here from "../assets/images/heree.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
