@@ -14,7 +14,7 @@ const Achievements = () => {
     <div className="max-w-[90vw] mx-auto px-6 py-16">
 
       {/* Stats Section */}
-      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-6 xs:grid-cols-1 text-white">
+      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2 xs:grid-cols-1 text-white">
         {cardsData.map((card, index) => (
           <Card
             key={index}
