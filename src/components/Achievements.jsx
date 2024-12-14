@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./Card";
+import here from "../assets/images/heree.png";
+
 
 const Achievements = () => {
   // Data for the cards
@@ -11,7 +13,7 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="max-w-[90vw] mx-auto px-6 py-16">
+    <div className="max-w-[85vw] mx-auto px-6 py-16">
 
       {/* Stats Section */}
       <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2 xs:grid-cols-1 text-white">
@@ -27,17 +29,17 @@ const Achievements = () => {
       </div>
 
       {/* Text Section */}
-      <div className="mt-16 text-center max-w-4xl mx-auto">
-        <p className="text-xl lg:text-2xl font-light leading-relaxed">
-          We are a team of professionals dedicated to the art of{" "}
-          <span className="relative text-pink-500 font-bold">
+      <div className="mt-16 text-center max-w-4xl mx-auto relative">
+        <p className="text-3xl lg:text-2xl  leading-relaxed">
+          We are a team of professionals dedicated to the art of <br />{"  "}
+          <span className="relative underline text-pink-500">
             social media
             {/* Circle around "social media" */}
-            <span className="absolute left-0 bottom-[-5px] w-full h-[1px] bg-pink-500"></span>
           </span>
           . We turn ideas into reality, building impressive online stories and
           ensuring rapid growth of your brand.
         </p>
+            {/* <img src= {here} width="200px" height="100px" className="absolute top-6 z-[-1]"/> */}
       </div>
     </div>
   );

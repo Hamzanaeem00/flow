@@ -1,9 +1,4 @@
-import {
-  ChevronDown,
-  ChevronDownCircle,
-  Instagram,
-  Music,
-} from "lucide-react";
+import { ChevronDown, ChevronDownCircle, Instagram, Music } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import emoji from "../assets/images/pinkk.png";
 import here from "../assets/images/heree.png";
@@ -11,10 +6,8 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Video from "./Video";
 
-
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
-
 
 const SocialBanner = () => {
   const imgRef = useRef(null);
@@ -49,7 +42,6 @@ const SocialBanner = () => {
       }
     );
   }, []);
-
 
   return (
     <div>
@@ -97,19 +89,19 @@ const SocialBanner = () => {
               </div>
             </div>
             <div className="mt-7">
-            <span className=" lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
-              in the{" "}
-            </span>
-            <span className=" tracking-tighter text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl text-gray-300">
-              social media
-            </span>
+              <span className=" lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
+                in the{" "}
+              </span>
+              <span className=" tracking-tighter text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl text-gray-300">
+                social media
+              </span>
             </div>
 
-             {/* for small screens */}
+            {/* for small screens */}
 
             <div className="grid grid-cols-12 gap-4 items-center p-8 lg:hidden xl:hidden 2xl:hidden">
               {/* Left Icon */}
-             
+
               <div className="col-span-1 flex items-center justify-center cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -143,20 +135,19 @@ const SocialBanner = () => {
                       style={{
                         transform: "rotate(-12deg)",
                       }}
-                    > 
-                     <img
-      ref={hereimgRef}
-      src={here}
-      alt="Animated"
-      style={{
-        maxWidth: "250px",
-      }}
-    />
+                    >
+                      <img
+                        loading="lazy"
+                        ref={hereimgRef}
+                        src={here}
+                        alt="Animated"
+                        style={{
+                          maxWidth: "250px",
+                        }}
+                      />
                     </span>
                   </span>
-    
                 </span>
-                
               </div>
               <div className="col-span-2">
                 <span
@@ -171,106 +162,100 @@ const SocialBanner = () => {
                 </span>
               </div>
             </div>
-            
           </div>
           <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center relative  mt-6">
-          <Video />
+            <Video />
           </div>
         </div>
 
         <div className="grid grid-cols-12 gap-4 items-center  md:hidden sm:hidden xs:hidden">
-              {/* Left Icon */}
-              <div className="col-span-2 flex items-center justify-center cursor-pointer">
-               <img
-      src={emoji}
-      alt="Animated emoji"
-      ref={imgRef}
-      style={{ width: "160px", opacity: 0 }} // Initial opacity for smooth animation
-    />
-              <svg
-  style={{
-    marginLeft: "-20px",
-    marginTop: "-20px",
-    zIndex: "-1",
-    animation: "bounce 2s infinite",
-  }}
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 24 24"
-  fill="currentColor"
-  className="bg-punk bg-aqua p-5 rounded-full"
->
-  <path
-    fillRule="evenodd"
-    d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
-    clipRule="evenodd"
-  />
-  <path
-    fillRule="evenodd"
-    d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
-    clipRule="evenodd"
-  />
-</svg>
+          {/* Left Icon */}
+          <div className="col-span-2 flex items-center justify-center cursor-pointer">
+            <img
+              loading="lazy"
+              src={emoji}
+              alt="Animated emoji"
+              ref={imgRef}
+              style={{ width: "160px", opacity: 0 }} // Initial opacity for smooth animation
+            />
+            <svg
+              style={{
+                marginLeft: "-20px",
+                marginTop: "-20px",
+                zIndex: "-1",
+                animation: "bounce 2s infinite",
+              }}
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="bg-punk bg-aqua p-5 rounded-full"
+            >
+              <path
+                fillRule="evenodd"
+                d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
+                clipRule="evenodd"
+              />
+              <path
+                fillRule="evenodd"
+                d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
+                clipRule="evenodd"
+              />
+            </svg>
 
-<style jsx>{`
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-`}</style>
+            <style jsx>{`
+              @keyframes bounce {
+                0%,
+                100% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                }
+              }
+            `}</style>
+          </div>
 
-              </div>
-
-              {/* Text Content */}
-              <div className="col-span-9 flex mt-[-20px]">
-                <span className="relative tracking-tight  text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl">
-                  world starts{" "}
-                  <span className="relative inline-block ">
-                    {" "}
-                    here!
-                    {/* Pink oval */}
-                    <span
-                      className="absolute inset-0 -top-2 -left-5 w-full h-full  rounded-full z-[-1]"
-                      style={{
-                        transform: "rotate(-6deg)",
-                        
-                      }}
-                     
-                    >
-                       <img
-      ref={hereimgRef}
-      src={here}
-      alt="Animated"
-      style={{
-        maxWidth: "250px",
-      }}
-    />
-                    </span>
-                  </span>
-    
-                </span>
-                <div className=" mx-20 sm-font relative"  style={{
-                    transform: "rotate(-25deg)",
-                  }}>
+          {/* Text Content */}
+          <div className="col-span-9 flex mt-[-20px]">
+            <span className="relative tracking-tight  text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl">
+              world starts{" "}
+              <span className="relative inline-block ">
+                {" "}
+                here!
+                {/* Pink oval */}
                 <span
-                  className=" text-pink-500 text-sm font-bold italic absolute bottom-10"
-                 
+                  className="absolute inset-0 -top-2 -left-5 w-full h-full  rounded-full z-[-1]"
+                  style={{
+                    transform: "rotate(-6deg)",
+                  }}
                 >
-                  SMM from <br /> professionals
+                  <img
+                    loading="lazy"
+                    ref={hereimgRef}
+                    src={here}
+                    alt="Animated"
+                    style={{
+                      maxWidth: "250px",
+                    }}
+                  />
                 </span>
-              </div>
-                
-              </div>
-             
+              </span>
+            </span>
+            <div
+              className=" mx-20 sm-font relative"
+              style={{
+                transform: "rotate(-25deg)",
+              }}
+            >
+              <span className=" text-pink-500 text-sm font-bold italic absolute bottom-10">
+                SMM from <br /> professionals
+              </span>
             </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default SocialBanner;
-

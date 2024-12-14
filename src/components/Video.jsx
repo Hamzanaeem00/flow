@@ -11,7 +11,7 @@ const Video = () => {
     <div className="flex justify-end absolute right-[-12px] top-[-12px] px-2 h-10  bg-black rounded-full flex items-center justify-center">
               <FontAwesomeIcon className="w-6 h-3 text-white" icon={faPlay} />
             </div>
-            <img
+            <img loading="lazy"
               src={social}
               className="w-full rounded-3xl h-[190px] shadow-lg"
             />
