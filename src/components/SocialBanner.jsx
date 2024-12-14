@@ -16,8 +16,8 @@ const SocialBanner = () => {
 
   return (
     <div>
-      <div className=" max-w-[90vw] mx-auto cursor-pointer mt-40 px-6  ">
-        <div className=" grid grid-cols-12 gap-0 ">
+      <div className="  cursor-pointer mt-40  ">
+        <div className=" max-w-[90vw] mx-auto grid grid-cols-12 gap-0 ">
           <div className="col-span-8 lg:col-span-9 md:col-span-12 sm:col-span-12 xs:col-span-12 ">
             {/* Icons  */}
             <div className="icon flex ">
@@ -67,13 +67,13 @@ const SocialBanner = () => {
             </span>
             <div className="grid grid-cols-12 gap-4 items-center p-8 lg:hidden xl:hidden 2xl:hidden">
               {/* Left Icon */}
-              <img src={emoji} alt="" />
+             
               <div className="col-span-1 flex items-center justify-center cursor-pointer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="size-16 bg-punk bg-aqua p-5  rounded-full "
+                  className=" bg-punk bg-aqua p-5  rounded-full "
                 >
                   <path
                     fill-rule="evenodd"
@@ -132,26 +132,45 @@ const SocialBanner = () => {
             />
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-4 items-center p-8 md:hidden sm:hidden xs:hidden">
+        <div className="grid grid-cols-12 gap-4 items-center  md:hidden sm:hidden xs:hidden">
               {/* Left Icon */}
-              <div className="col-span-1 flex items-center justify-center cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="size-16 bg-punk bg-aqua p-5  rounded-full "
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
-                    clip-rule="evenodd"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+              <div className="col-span-2 flex items-center justify-center cursor-pointer">
+              <img src={emoji} alt="" width="160px" className=""  />
+              <svg
+  style={{
+    marginLeft: "-20px",
+    marginTop: "-20px",
+    zIndex: "-1",
+    animation: "bounce 2s infinite",
+  }}
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  className="bg-punk bg-aqua p-5 rounded-full"
+>
+  <path
+    fillRule="evenodd"
+    d="M11.47 13.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 0 0-1.06-1.06L12 11.69 5.03 4.72a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
+    clipRule="evenodd"
+  />
+  <path
+    fillRule="evenodd"
+    d="M11.47 19.28a.75.75 0 0 0 1.06 0l7.5-7.5a.75.75 0 1 0-1.06-1.06L12 17.69l-6.97-6.97a.75.75 0 0 0-1.06 1.06l7.5 7.5Z"
+    clipRule="evenodd"
+  />
+</svg>
+
+<style jsx>{`
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+`}</style>
               </div>
 
               {/* Text Content */}
