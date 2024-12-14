@@ -1,51 +1,82 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card";
-import here from "../assets/images/heree.png";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const Achievements = () => {
-  // Data for the cards
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    cardsRef.current.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        { y: -100, opacity: 0 }, // Start position: above the viewport
+        {
+          y: 0,
+          opacity: 1,
+          duration: 3,
+          ease: "bounce.out",
+          scrollTrigger: {
+            trigger: card, // Each card triggers its own animation
+            start: "top 90%", // Start animation when the card is 90% down the viewport
+            end: "bottom 10%", // Define when the animation ends
+            toggleActions: "play none none none", // Animation only plays once
+            onEnter: () => {
+              // Trigger when scrolling into view
+              gsap.fromTo(
+                card,
+                { y: -100, opacity: 0 }, // Start position
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 3,
+                  ease: "bounce.out",
+                }
+              );
+            },
+            onEnterBack: () => {
+              // Trigger when scrolling back into view
+              gsap.fromTo(
+                card,
+                { y: -100, opacity: 0 }, // Start position
+                {
+                  y: 0,
+                  opacity: 1,
+                  duration: 3,
+                  ease: "bounce.out",
+                }
+              );
+            },
+          },
+        }
+      );
+    });
+  }, []);
+
   const cardsData = [
     { stat: "10,000+", description: "Created campaigns", number: "01" },
-    { stat: "98%", description: "Brand growth", number: "03" },
-    { stat: "160,000", description: "Satisfied customers", number: "02" },
-    { stat: "19", description: "Years on the market", number: "04", isLastCard: true },
+    { stat: "98%", description: "Brand growth", number: "02" },
+    { stat: "160,000", description: "Satisfied customers", number: "03" },
+    { stat: "19", description: "Years on the market", number: "04" },
   ];
 
   return (
-    <div className="max-w-[85vw] mx-auto px-6 py-8">
-
-      {/* Stats Section */}
-      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2 xs:grid-cols-1 text-white">
- {cardsData.map((card, index)=> {
-  return (
-    <>
-    <Card
-    key={index}
-    stat={card.stat}
-    description={card.description}
-    number={card.number}
-    isLastCard={card.isLastCard || false} // Only the last card gets the decorative element
-  />
-  </>
-  )
-}
-)}
-</div>
-
-
-      {/* Text Section */}
-      <div className="mt-16 text-center max-w-4xl mx-auto relative">
-        <p className="text-3xl lg:text-2xl  leading-relaxed">
-          We are a team of professionals dedicated to the art of <br />{"  "}
-          <span className="relative underline text-pink-500">
-            social media
-            {/* Circle around "social media" */}
-          </span>
-          . We turn ideas into reality, building impressive online stories and
-          ensuring rapid growth of your brand.
-        </p>
-            {/* <img src= {here} width="200px" height="100px" className="absolute top-6 z-[-1]"/> */}
+    <div className="max-w-[85vw] mx-auto px-6 py-16">
+      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {cardsData.map((card, index) => (
+          <div
+            key={index}
+            ref={(el) => (cardsRef.current[index] = el)} // Add each card to the ref array
+          >
+            <Card
+              stat={card.stat}
+              description={card.description}
+              number={card.number}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

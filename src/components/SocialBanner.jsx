@@ -14,34 +14,49 @@ const SocialBanner = () => {
   const hereimgRef = useRef(null);
 
   useEffect(() => {
-    // Initialize GSAP animation
-    gsap.fromTo(
-      imgRef.current,
-      { x: -200, opacity: 0 }, // Start position (off-screen left)
-      {
-        x: 0, // End position (original position)
-        opacity: 1,
-        duration: 1, // Animation duration
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: imgRef.current, // Element to trigger the animation
-          start: "top 80%", // Start when top of image is 80% down the viewport
-          toggleActions: "play none none none", // Play only when scrolled into view
-        },
-      }
-    );
+    // Animation for imgRef
+    ScrollTrigger.create({
+      trigger: imgRef.current, // Element to watch
+      start: "top 80%", // Start animation when the top of the image is at 80% viewport height
+      onEnter: () => {
+        gsap.fromTo(
+          imgRef.current,
+          { x: -200, opacity: 0 }, // Start position
+          { x: 0, opacity: 1, duration: 3, ease: "power3.out" } // End position
+        );
+      },
+      onEnterBack: () => {
+        gsap.fromTo(
+          imgRef.current,
+          { x: -200, opacity: 0 }, // Start position
+          { x: 0, opacity: 1, duration: 3, ease: "power3.out" } // End position
+        );
+      },
+    });
 
-    gsap.fromTo(
-      hereimgRef.current,
-      { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
-      {
-        clipPath: "inset(0% 0% 0% 0%)", // Full visibility
-        opacity: 1,
-        duration: 2, // Animation duration
-        ease: "power2.out",
-      }
-    );
+    // Animation for hereimgRef
+    ScrollTrigger.create({
+      trigger: hereimgRef.current,
+      start: "top 80%",
+      onEnter: () => {
+        gsap.fromTo(
+          hereimgRef.current,
+          { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
+          { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 3, ease: "power2.out" } // End point
+        );
+      },
+      onEnterBack: () => {
+        gsap.fromTo(
+          hereimgRef.current,
+          { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
+          { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 3, ease: "power2.out" } // End point
+        );
+      },
+    });
   }, []);
+
+
+
 
   return (
     <div>
