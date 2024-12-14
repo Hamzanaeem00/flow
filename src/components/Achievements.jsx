@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card";
+import Accordion from "./Accordian";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,6 +88,8 @@ const Achievements = () => {
           ensuring rapid growth of your brand.
         </p>
       </div>
+
+      <Accordion />
     </div>
   );
 };
