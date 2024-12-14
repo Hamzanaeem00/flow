@@ -18,6 +18,8 @@ const SocialBanner = () => {
     ScrollTrigger.create({
       trigger: imgRef.current, // Element to watch
       start: "top 80%", // Start animation when the top of the image is at 80% viewport height
+      scrub: 2,
+
       onEnter: () => {
         gsap.fromTo(
           imgRef.current,
@@ -38,6 +40,8 @@ const SocialBanner = () => {
     ScrollTrigger.create({
       trigger: hereimgRef.current,
       start: "top 80%",
+      scrub: 2,
+
       onEnter: () => {
         gsap.fromTo(
           hereimgRef.current,

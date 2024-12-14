@@ -12,43 +12,43 @@ const Achievements = () => {
     cardsRef.current.forEach((card, index) => {
       gsap.fromTo(
         card,
-        { y: -100, opacity: 0 }, // Start position: above the viewport
+        { y: -100, opacity: 1 }, // Start position: above the viewport
         {
           y: 0,
           opacity: 1,
-          duration: 3,
+          duration: 2,
           ease: "bounce.out",
           scrollTrigger: {
             trigger: card, // Each card triggers its own animation
             start: "top 90%", // Start animation when the card is 90% down the viewport
             end: "bottom 10%", // Define when the animation ends
-            toggleActions: "play none none none", // Animation only plays once
+            // toggleActions: "play none none none", // Animation only plays once
             onEnter: () => {
               // Trigger when scrolling into view
               gsap.fromTo(
                 card,
-                { y: -100, opacity: 0 }, // Start position
+                { y: -100, opacity: 1 }, // Start position
                 {
                   y: 0,
                   opacity: 1,
-                  duration: 3,
+                  duration: 2,
                   ease: "bounce.out",
                 }
               );
             },
-            onEnterBack: () => {
-              // Trigger when scrolling back into view
-              gsap.fromTo(
-                card,
-                { y: -100, opacity: 0 }, // Start position
-                {
-                  y: 0,
-                  opacity: 1,
-                  duration: 3,
-                  ease: "bounce.out",
-                }
-              );
-            },
+            // onEnterBack: () => {
+            //   // Trigger when scrolling back into view
+            //   gsap.fromTo(
+            //     card,
+            //     { y: -100, opacity: 0 }, // Start position
+            //     {
+            //       y: 0,
+            //       opacity: 1,
+            //       duration: 2,
+            //       ease: "bounce.out",
+            //     }
+            //   );
+            // },
           },
         }
       );
