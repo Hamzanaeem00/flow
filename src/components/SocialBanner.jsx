@@ -97,7 +97,7 @@ const SocialBanner = () => {
               </div>
             </div>
             <div className="mt-7">
-            <span className=" tracking-tight lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
+            <span className=" lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
               in the{" "}
             </span>
             <span className=" tracking-tighter text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl text-gray-300">

@@ -13,7 +13,7 @@ const Video = () => {
             </div>
             <img
               src={social}
-              className="w-full rounded-3xl h-[160px] shadow-lg"
+              className="w-full rounded-3xl h-[190px] shadow-lg"
             />
   </>
   )
