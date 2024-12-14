@@ -6,14 +6,14 @@ const Card = ({ stat, description, number, isLastCard }) => {
     <div className="p-6 flex flex-col justify-between h-full">
       <div className="space-y-1">
         <p className="text-[40px] font-medium tracking-tight text-cyan-400">
-          10,000+
+          {stat}
         </p>
         <p className="text-gray-400 text-sm">
-          Created campaigns
+         {description}
         </p>
       </div>
       <div className="text-gray-600 text-sm">
-        /01
+        {number}
       </div>
     </div>
   </div>
