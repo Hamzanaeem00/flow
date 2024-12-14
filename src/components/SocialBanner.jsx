@@ -3,22 +3,20 @@ import {
   ChevronDownCircle,
   Instagram,
   Music,
-  Play,
 } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
-import social from "../assets/images/socialimage.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
-import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon
+import React, { useEffect, useRef } from "react";
 import emoji from "../assets/images/pinkk.png";
 import here from "../assets/images/heree.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Video from "./Video";
+
+
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 
 const SocialBanner = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const imgRef = useRef(null);
   const hereimgRef = useRef(null);
 
@@ -107,6 +105,8 @@ const SocialBanner = () => {
             </span>
             </div>
 
+             {/* for small screens */}
+
             <div className="grid grid-cols-12 gap-4 items-center p-8 lg:hidden xl:hidden 2xl:hidden">
               {/* Left Icon */}
              
@@ -139,11 +139,20 @@ const SocialBanner = () => {
                     here!
                     {/* Pink oval */}
                     <span
-                      className="absolute inset-0 -top-2 -left-5 w-full h-full border-4 border-pink-500 rounded-full z-[-1]"
+                      className="absolute inset-0 -top-2 -left-5 w-full h-full  rounded-full z-[-1]"
                       style={{
                         transform: "rotate(-12deg)",
                       }}
-                    ></span>
+                    > 
+                     <img
+      ref={hereimgRef}
+      src={here}
+      alt="Animated"
+      style={{
+        maxWidth: "250px",
+      }}
+    />
+                    </span>
                   </span>
     
                 </span>
@@ -165,15 +174,10 @@ const SocialBanner = () => {
             
           </div>
           <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center relative  mt-6">
-            <div className="flex justify-end absolute right-[-12px] top-[-12px] px-2 h-10  bg-black rounded-full flex items-center justify-center">
-              <FontAwesomeIcon className="w-6 h-3 text-white" icon={faPlay} />
-            </div>
-            <img
-              src={social}
-              className="w-full rounded-3xl h-[160px] shadow-lg"
-            />
+          <Video />
           </div>
         </div>
+
         <div className="grid grid-cols-12 gap-4 items-center  md:hidden sm:hidden xs:hidden">
               {/* Left Icon */}
               <div className="col-span-2 flex items-center justify-center cursor-pointer">
@@ -218,10 +222,11 @@ const SocialBanner = () => {
     }
   }
 `}</style>
+
               </div>
 
               {/* Text Content */}
-              <div className="col-span-8 flex mt-[-20px]">
+              <div className="col-span-9 flex mt-[-20px]">
                 <span className="relative tracking-tight  text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl">
                   world starts{" "}
                   <span className="relative inline-block ">
@@ -248,9 +253,7 @@ const SocialBanner = () => {
                   </span>
     
                 </span>
-                
-              </div>
-              <div className="col-span-2 mx-3 sm-font relative"  style={{
+                <div className=" mx-20 sm-font relative"  style={{
                     transform: "rotate(-25deg)",
                   }}>
                 <span
@@ -260,6 +263,9 @@ const SocialBanner = () => {
                   SMM from <br /> professionals
                 </span>
               </div>
+                
+              </div>
+             
             </div>
       </div>
     </div>
