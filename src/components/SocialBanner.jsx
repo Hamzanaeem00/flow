@@ -10,7 +10,7 @@ import social from "../assets/images/socialimage.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
 import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon
 import emoji from "../assets/images/pinkk.png";
-import here from "../assets/images/here.png";
+import here from "../assets/images/heree.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Register the ScrollTrigger plugin
@@ -20,6 +20,7 @@ gsap.registerPlugin(ScrollTrigger);
 const SocialBanner = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const imgRef = useRef(null);
+  const hereimgRef = useRef(null);
 
   useEffect(() => {
     // Initialize GSAP animation
@@ -36,6 +37,17 @@ const SocialBanner = () => {
           start: "top 80%", // Start when top of image is 80% down the viewport
           toggleActions: "play none none none", // Play only when scrolled into view
         },
+      }
+    );
+
+    gsap.fromTo(
+      hereimgRef.current,
+      { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
+      {
+        clipPath: "inset(0% 0% 0% 0%)", // Full visibility
+        opacity: 1,
+        duration: 2, // Animation duration
+        ease: "power2.out",
       }
     );
   }, []);
@@ -224,7 +236,14 @@ const SocialBanner = () => {
                       }}
                      
                     >
-                      <img src={here} alt="" style={{maxWidth: "250px"}} />
+                       <img
+      ref={hereimgRef}
+      src={here}
+      alt="Animated"
+      style={{
+        maxWidth: "250px",
+      }}
+    />
                     </span>
                   </span>
     
