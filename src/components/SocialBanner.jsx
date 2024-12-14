@@ -10,6 +10,8 @@ import social from "../assets/images/socialimage.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
 import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon
 import emoji from "../assets/images/pink.png";
+import here from "../assets/images/here.png";
+
 
 const SocialBanner = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -182,11 +184,15 @@ const SocialBanner = () => {
                     here!
                     {/* Pink oval */}
                     <span
-                      className="absolute inset-0 -top-2 -left-5 w-full h-full border-4 border-pink-500 rounded-full z-[-1]"
+                      className="absolute inset-0 -top-2 -left-5 w-full h-full  rounded-full z-[-1]"
                       style={{
-                        transform: "rotate(-12deg)",
+                        transform: "rotate(-6deg)",
+                        
                       }}
-                    ></span>
+                     
+                    >
+                      <img src={here} alt="" style={{maxWidth: "250px"}} />
+                    </span>
                   </span>
     
                 </span>
