@@ -13,7 +13,7 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="max-w-[85vw] mx-auto px-6 py-16">
+    <div className="max-w-[85vw] mx-auto px-6 py-8">
 
       {/* Stats Section */}
       <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-2 xs:grid-cols-1 text-white">
