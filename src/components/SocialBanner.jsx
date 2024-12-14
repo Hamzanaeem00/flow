@@ -9,7 +9,7 @@ import React, { useEffect, useRef, useState } from "react";
 import social from "../assets/images/socialimage.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
 import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon
-import emoji from "../assets/images/pink.png";
+import emoji from "../assets/images/pinkk.png";
 import here from "../assets/images/here.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -86,12 +86,15 @@ const SocialBanner = () => {
                 </span>
               </div>
             </div>
+            <div className="mt-7">
             <span className=" tracking-tight lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
               in the{" "}
             </span>
             <span className=" tracking-tighter text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl text-gray-300">
               social media
             </span>
+            </div>
+
             <div className="grid grid-cols-12 gap-4 items-center p-8 lg:hidden xl:hidden 2xl:hidden">
               {/* Left Icon */}
              
