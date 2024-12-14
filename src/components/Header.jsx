@@ -26,10 +26,10 @@ export default function Header() {
   }
 
   return (
-    <section className="max-w-[95vw] mx-auto">
+    <section className="max-w-[95vw] mx-auto  ">
     <nav className={
-      `  fixed top-5 min-w-[95vw] mx-auto  rounded-full  transition-all duration-300
-      ${isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-black"}`
+      `  fixed top-5 min-w-[95vw] mx-auto rounded-full nav-bar  transition-all duration-300
+      ${isScrolled ? "bg-black/100 " : "bg-black"}`
     }>
       <div className=" px-2 sm:px-2 w-full">
         <div className="flex items-center justify-between h-16">

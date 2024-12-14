@@ -56,6 +56,10 @@ body {
   /* margin: auto; */
 }
 
+.nav-bar {
+  z-index: 1;
+}
+
 .sm-font {
   /* font-family: "Playwrite GB S Guides", cursive; */
   font-weight: 400;
