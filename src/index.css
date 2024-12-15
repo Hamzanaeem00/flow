@@ -231,3 +231,15 @@ body {
   transition: ease-in-out 1s;
   display: block;
 }
+
+@media only screen and (max-width: 614px) {
+  .nav_section_hide {
+    display: none;
+  }
+  .mobile-navigation {
+    display: block;
+  }
+  .socail-media {
+   position: unset;
+  }
+}

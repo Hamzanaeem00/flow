@@ -46,21 +46,28 @@ const SocialBanner = () => {
         gsap.fromTo(
           hereimgRef.current,
           { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
-          { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 3, ease: "power2.out" } // End point
+          {
+            clipPath: "inset(0% 0% 0% 0%)",
+            opacity: 1,
+            duration: 3,
+            ease: "power2.out",
+          } // End point
         );
       },
       onEnterBack: () => {
         gsap.fromTo(
           hereimgRef.current,
           { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
-          { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 3, ease: "power2.out" } // End point
+          {
+            clipPath: "inset(0% 0% 0% 0%)",
+            opacity: 1,
+            duration: 3,
+            ease: "power2.out",
+          } // End point
         );
       },
     });
   }, []);
-
-
-
 
   return (
     <div>
@@ -182,14 +189,14 @@ const SocialBanner = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center relative  mt-6">
+          <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center relative socail-media mt-6">
             <Video />
           </div>
         </div>
 
         <div className="grid grid-cols-12 gap-4 items-center  md:hidden sm:hidden xs:hidden">
           {/* Left Icon */}
-          <div className="col-span-2 flex items-center justify-center cursor-pointer">
+          <div className="col-span-2 flex items-center justify-center cursor-pointer ">
             <img
               loading="lazy"
               src={emoji}
