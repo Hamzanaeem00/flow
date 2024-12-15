@@ -58,7 +58,15 @@ const options = { loop: true }
   }, [emblaApi])
 
   return (
+    <>
+   
     <div className="embla max-w-[70vw] mt-20 mx-auto ">
+    <div className='  text-pink-500 font-medium text-center'>    
+        Insider and Trends*
+    </div>
+    <div className='mb-10 text-4xl font-medium text-center'>    
+        Our blog
+    </div>
       <div className="embla__viewport grid"  ref={emblaRef}>
         <div className="embla__container ">
           {slides?.map((blog) => (
@@ -99,6 +107,7 @@ const options = { loop: true }
         </button> */}
       </div>
     </div>
+    </>
   )
 }
 
