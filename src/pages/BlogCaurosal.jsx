@@ -7,7 +7,7 @@ import { blogPosts as slides } from '../assets/utils'
 
 const EmblaCarousel = () => {
 const options = { loop: true }
-    
+
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     AutoScroll({ playOnInit: false })
   ])
@@ -83,7 +83,7 @@ const options = { loop: true }
       </div>
 
       <div className="embla__controls">
-        <div className="flex ">
+        <div className="grid grid-cols-2 gap-4 ">
           <PrevButton
             onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
             disabled={prevBtnDisabled}
@@ -94,9 +94,9 @@ const options = { loop: true }
           />
         </div>
 
-        <button className="embla__play" onClick={toggleAutoplay} type="button">
+        {/* <button className="embla__play" onClick={toggleAutoplay} type="button">
           {isPlaying ? 'Stop' : 'Start'}
-        </button>
+        </button> */}
       </div>
     </div>
   )

@@ -115,7 +115,7 @@ export default function Header() {
       {isOpen && (
         <section className="w-full flex justify-center items-center">
           <nav
-            className={`fixed top-[60px] w-[50vh] mx-10 h-[80vh] pt-10 rounded-lg transition-all duration-300
+            className={`fixed top-[60px] w-[50vh] mx-10 h-[80vh] pt-10 rounded-lg transition-all duration-300 nav-bar
             ${isScrolled ? "bg-black/80" : "bg-black"}`}
           >
             <div className=" px-2 sm:px-2 w-full">
