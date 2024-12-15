@@ -66,9 +66,9 @@ body {
   font-style: normal;
 }
 
-/* ====================================  services page start ======================================== */
+/* ====================================  services section start ======================================== */
 .services-box {
-  margin: 200px 100px;
+  padding: 70px 100px;
 }
 /* ====> image section start */
 .happy-customer-card {
@@ -118,14 +118,20 @@ body {
   border-top: none !important;
 }
 .ant-collapse-content > .ant-collapse-content-box {
-  padding: 10px 10px 15px 90px !important;
+  padding: 0px 10px 20px 90px !important;
 }
 .ant-collapse-expand-icon {
   display: none !important;
 }
 /* ====> accordion for services end  */
 
-/* ======================================== services page end =========================================== */
+/* ======================================== services section end =========================================== */
+
+/* ======================================== porfolio section start =========================================== */
+.porfolio-box {
+  padding: 70px 100px;
+}
+/* ======================================== porfolio section end =========================================== */
 
 @keyframes leftToRight {
   0% {
@@ -152,11 +158,12 @@ body {
 
 /* Extra small screens (e.g., small phones) */
 @media (min-width: 320px) and (max-width: 480px) {
+  .porfolio-box,
   .services-box {
-    margin: 100px 15px;
+    padding: 50px 15px;
   }
   .ant-collapse-content > .ant-collapse-content-box {
-    padding: 10px 10px 15px 50px !important;
+    padding: 0px 10px 20px 50px !important;
   }
   .happy-customer-card {
     width: 300px;
@@ -172,37 +179,40 @@ body {
 }
 
 /* Small screens (e.g., phones) */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 768px) {
+  .porfolio-box,
   .services-box {
-    margin: 120px 25px;
+    padding: 60px 25px;
   }
   .ant-collapse-content > .ant-collapse-content-box {
-    padding: 10px 10px 15px 55px !important;
+    padding: 0px 10px 20px 55px !important;
   }
 }
 
 /* Medium screens (e.g., tablets) */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  .porfolio-box,
   .services-box {
-    margin: 140px 35px;
+    padding: 70px 30px;
   }
   .ant-collapse-content > .ant-collapse-content-box {
-    padding: 10px 10px 15px 60px !important;
+    padding: 0px 10px 20px 60px !important;
   }
 }
 
 /* Large screens (e.g., laptops) */
-@media (min-width: 1025px) and (max-width: 1366px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .porfolio-box,
   .services-box {
-    margin: 160px 75px;
+    padding: 70px 75px;
   }
   .ant-collapse-content > .ant-collapse-content-box {
-    padding: 10px 10px 15px 75px !important;
+    padding: 0px 10px 20px 75px !important;
   }
 }
 
 /* Extra large screens (e.g., desktops) */
-@media (min-width: 1367px) and (max-width: 1600px) {
+@media (min-width: 1366px) and (max-width: 1600px) {
   /* Styles for xl */
 }
 
@@ -212,13 +222,12 @@ body {
 }
 /* ======================================== media query end =========================================== */
 
-
-.card-show{
+.card-show {
   display: none;
   /* mix-blend-mode: darken;   */
 }
 
 .card-img :hover .card-show {
   transition: ease-in-out 1s;
-   display: block;
+  display: block;
 }

@@ -7,11 +7,13 @@ const Button = ({
   hover,
   borderRadius,
   padding,
+  onClick,
 }) => {
   return (
     <button
       style={{ borderRadius: borderRadius }}
       className={`${backgroundColor} ${textColor}  ${hover} ${borderRadius} ${padding} px-6 py-3 font-medium `}
+      onClick={onClick}
     >
       {text}
     </button>

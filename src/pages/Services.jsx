@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Collapse } from "antd";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
-  AArrowDown,
   Activity,
   ChartScatter,
   EarthLock,
@@ -10,6 +11,8 @@ import {
 } from "lucide-react";
 import Button from "../components/Button";
 import ImageSection from "../components/ImageSection";
+
+gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
 
 const items = [
   {
@@ -45,26 +48,68 @@ const items = [
 ];
 
 const Services = () => {
-  // State to track the active panel (which one to show the children for)
   const [activePanel, setActivePanel] = useState(null);
 
-  // Function to prevent collapsing when clicking on the label or icon
+  // Refs for sections
+  const imageSectionRef = useRef(null);
+  const collapseSectionRef = useRef(null);
+
+  useEffect(() => {
+    // GSAP animations
+    gsap.fromTo(
+      imageSectionRef.current,
+      { x: "-100%", opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 3,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: imageSectionRef.current,
+          start: "top 30%", // When the top of the section reaches 30% of the viewport
+        },
+      }
+    );
+
+    gsap.fromTo(
+      collapseSectionRef.current,
+      { x: "100%", opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: collapseSectionRef.current,
+          start: "top 30%", // When the top of the section reaches 30% of the viewport
+        },
+      }
+    );
+  }, []);
+
   const preventCollapse = (event) => {
     event.stopPropagation();
   };
 
-  // Custom function to handle the "Details" button click and prevent collapse
   const genExtra = (event, key) => {
     event.stopPropagation();
-    setActivePanel(activePanel === key ? null : key); // Close if already open, open if not
+    setActivePanel(activePanel === key ? null : key);
   };
 
   return (
     <div className="services-box grid grid-cols-12 gap-4">
-      <div className="flex xs:justify-center sm:justify-center col-span-5 xs:col-span-12 sm:col-span-12 md:col-span-6">
+      {/* Image Section On LeftSide */}
+      <div
+        ref={imageSectionRef}
+        className="flex xs:justify-center sm:justify-center col-span-5 xs:col-span-12 sm:col-span-12 md:col-span-6"
+      >
         <ImageSection />
       </div>
-      <div className="col-span-7 xs:col-span-12 sm:col-span-12 md:col-span-6 xs:mt-12 sm:mt-10">
+      {/* Collapse/Accordion On RightSide */}
+      <div
+        ref={collapseSectionRef}
+        className="col-span-7 xs:col-span-12 sm:col-span-12 md:col-span-6 xs:mt-12 sm:mt-10"
+      >
         <h2 className="text-6xl xs:text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-medium mb-12 xs:mb-4 sm:mb-5">
           Revealing the secrets{" "}
           <br className="xs:hidden sm:hidden md:hidden lg:hidden" /> of our
@@ -90,7 +135,7 @@ const Services = () => {
                     </div>
                   </div>
                   {/* Title label */}
-                  <div className="text-md font-bold text-gray-600">
+                  <div className="text-md font-medium text-gray-800">
                     {item.label}
                   </div>
                   {/* Detail button */}
@@ -101,7 +146,7 @@ const Services = () => {
                     <Button
                       text="Details"
                       backgroundColor="bg-black"
-                      textColor="text-gray-300"
+                      textColor="text-gray-100"
                       borderRadius="50px"
                       padding="px-8"
                     />
