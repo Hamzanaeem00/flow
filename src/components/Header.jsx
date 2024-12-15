@@ -42,8 +42,8 @@ export default function Header() {
     <React.Fragment>
       <section className="max-w-[95vw] mx-auto md:flex nav_section_hide">
         <nav
-          className={`  fixed top-5 min-w-[95vw] mx-auto  rounded-full  transition-all duration-300
-      ${isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-black"}`}
+          className={`  fixed top-5 min-w-[95vw] mx-auto nav-bar  rounded-full  transition-all duration-300
+      ${isScrolled ? "bg-black backdrop-blur-sm" : "bg-black"}`}
         >
           <div className=" px-2 sm:px-2 w-full">
             <div className="flex items-center justify-between h-16">

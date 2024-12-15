@@ -16,7 +16,7 @@ function App() {
        <About />
        <Services />
        <Portfolio />
-       {/* <Faq /> */}
+       <Faq />
        {/* <Blog /> */}
        {/* <Contact /> */}
       </div>
