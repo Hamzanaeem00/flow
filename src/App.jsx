@@ -1,6 +1,6 @@
 import './App.css'
 import About from './pages/About'
-import Blog from './pages/Blog'
+import EmblaCarousel from './pages/BlogCaurosal'
 import Contact from './pages/Contact'
 import Faq from './pages/Faq'
 import Home from './pages/Home'
@@ -17,7 +17,7 @@ function App() {
        <Services />
        <Portfolio />
        <Faq />
-       {/* <Blog /> */}
+       <EmblaCarousel   />
        {/* <Contact /> */}
       </div>
     </>

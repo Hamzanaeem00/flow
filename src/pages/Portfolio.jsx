@@ -126,7 +126,7 @@ const Portfolio = () => {
         {/* Rectangular Image Section On RightSide */}
         <div className="col-span-7 xs:col-span-12 sm:col-span-12 md:col-span-6 xs:mt-12 sm:mt-10">
           <div className="relative">
-            <img src={girl2} className="h-[330px] w-full rounded-3xl" />
+            <img src={girl2} className="h-[330px] w-full rounded-3xl" loading="lazy" />
             <Button
               text="View all"
               backgroundColor="bg-[#ffffff2e]"
