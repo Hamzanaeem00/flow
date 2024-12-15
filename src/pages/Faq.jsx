@@ -13,22 +13,23 @@ const Faq = () => {
     {
       title: "WHICH SOCIAL NETWORKS ARE BEST FOR MY BUSINESS?",
       content:
-        "The best social networks depend on your business goals. Popular options include Facebook, Instagram, LinkedIn, and Twitter.",
+       "SMM (Social Media Marketing) is a strategy of using social networks to improve engagement and relationships with audiences. This is important for business because it allows you to communicate effectively with customers, increase brand awareness and accelerate growth.",
+
     },
     {
       title: "HOW OFTEN DO YOU NEED TO UPDATE CONTENT ON SOCIAL NETWORKS?",
       content:
-        "Regular updates are key. For most businesses, posting 3-5 times a week is ideal to keep audiences engaged.",
+      "SMM (Social Media Marketing) is a strategy of using social networks to improve engagement and relationships with audiences. This is important for business because it allows you to communicate effectively with customers, increase brand awareness and accelerate growth.",
     },
     {
       title: "HOW DO YOU HELP SOLVE CRISIS SITUATIONS IN SOCIAL NETWORKS?",
       content:
-        "We monitor, respond quickly, and provide solutions to mitigate crises while protecting your brand's image.",
+      "SMM (Social Media Marketing) is a strategy of using social networks to improve engagement and relationships with audiences. This is important for business because it allows you to communicate effectively with customers, increase brand awareness and accelerate growth.",
     },
     {
       title: "HOW WILL OUR COOPERATION WITH YOU GO?",
       content:
-        "Our process includes understanding your needs, developing a strategy, executing it, and providing ongoing support.",
+      "SMM (Social Media Marketing) is a strategy of using social networks to improve engagement and relationships with audiences. This is important for business because it allows you to communicate effectively with customers, increase brand awareness and accelerate growth.",
     },
   ];
 
@@ -38,7 +39,7 @@ const Faq = () => {
 
   return (
     <div className="max-w-[85vw] h-screen mx-auto px-4">
-      <div className="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="col-span-1">
       <h1 className="text-4xl font-bold text-left">FAQs</h1>
           <img src={faq} alt="" style={{height: "500px"}} />
