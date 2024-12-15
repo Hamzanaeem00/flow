@@ -58,7 +58,7 @@ const options = { loop: true }
   }, [emblaApi])
 
   return (
-    <div className="embla max-w-[75vw] mt-20 mx-auto ">
+    <div className="embla max-w-[70vw] mt-20 mx-auto ">
       <div className="embla__viewport grid"  ref={emblaRef}>
         <div className="embla__container ">
           {slides?.map((blog) => (
