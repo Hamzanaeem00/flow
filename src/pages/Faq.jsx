@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import faq from '../assets/images/faq.svg'
 
 const Faq = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const faqData = [
     {
