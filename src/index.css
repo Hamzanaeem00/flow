@@ -56,11 +56,82 @@ body {
   /* margin: auto; */
 }
 
+.nav-bar {
+  z-index: 1;
+}
+
 .sm-font {
   /* font-family: "Playwrite GB S Guides", cursive; */
   font-weight: 400;
   font-style: normal;
 }
+
+/* ====================================  services section start ======================================== */
+.services-box {
+  padding: 70px 100px;
+}
+/* ====> image section start */
+.happy-customer-card {
+  background-color: #49f7f2;
+  width: 350px;
+  height: 190px;
+  border-radius: 100px;
+}
+.happy-customer-card .child-1 {
+  padding: 45px 0px 0px 60px;
+}
+/* ====> white circle  */
+.happy-customer-card .child-2 {
+  background-color: #ffffff;
+  height: 150px;
+  margin: 20px 20px 20px 0;
+  border-radius: 100px;
+}
+/* ====> circle typpe box for image */
+.image-circle {
+  height: 170px;
+  border-radius: 100px;
+  border: 15px solid #ededed;
+}
+/* ====> rectangle type box for image */
+.image-rectangle {
+  height: 340px;
+  border-radius: 100px;
+  border: 15px solid #ededed;
+}
+/* ====> image section end */
+
+/* ====> accordion for services start */
+.ant-collapse-icon-position-start {
+  background-color: transparent !important;
+}
+.ant-collapse {
+  border-radius: 0px !important;
+  border: none !important;
+  border-top: 1px solid #d9d9d9 !important;
+}
+.ant-collapse-header {
+  padding: 15px 2px !important;
+  cursor: auto !important;
+}
+.ant-collapse-content {
+  border-top: none !important;
+}
+.ant-collapse-content > .ant-collapse-content-box {
+  padding: 0px 10px 20px 90px !important;
+}
+.ant-collapse-expand-icon {
+  display: none !important;
+}
+/* ====> accordion for services end  */
+
+/* ======================================== services section end =========================================== */
+
+/* ======================================== porfolio section start =========================================== */
+.porfolio-box {
+  padding: 70px 100px;
+}
+/* ======================================== porfolio section end =========================================== */
 
 @keyframes leftToRight {
   0% {
@@ -83,14 +154,80 @@ body {
   animation: leftToRight 1s ease-out forwards;
 }
 
-@media only screen and (max-width: 614px) {
-  .nav_section_hide {
-    display: none;
+/* ======================================== media query start =========================================== */
+
+/* Extra small screens (e.g., small phones) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .porfolio-box,
+  .services-box {
+    padding: 50px 15px;
   }
-  .mobile-navigation {
-    display: block;
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0px 10px 20px 50px !important;
   }
-  .socail-media {
-   position: unset;
+  .happy-customer-card {
+    width: 300px;
+    height: 160px;
   }
+  .happy-customer-card .child-1 {
+    padding: 25px 0px 0px 40px;
+  }
+  .happy-customer-card .child-2 {
+    height: 140px;
+    margin: 10px 10px 10px 0;
+  }
+}
+
+/* Small screens (e.g., phones) */
+@media (min-width: 480px) and (max-width: 768px) {
+  .porfolio-box,
+  .services-box {
+    padding: 60px 25px;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0px 10px 20px 55px !important;
+  }
+}
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .porfolio-box,
+  .services-box {
+    padding: 70px 30px;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0px 10px 20px 60px !important;
+  }
+}
+
+/* Large screens (e.g., laptops) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .porfolio-box,
+  .services-box {
+    padding: 70px 75px;
+  }
+  .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0px 10px 20px 75px !important;
+  }
+}
+
+/* Extra large screens (e.g., desktops) */
+@media (min-width: 1366px) and (max-width: 1600px) {
+  /* Styles for xl */
+}
+
+/* Ultra-wide screens (e.g., large monitors) */
+@media (min-width: 1601px) {
+  /* Styles for 2xl */
+}
+/* ======================================== media query end =========================================== */
+
+.card-show {
+  display: none;
+  /* mix-blend-mode: darken;   */
+}
+
+.card-img :hover .card-show {
+  transition: ease-in-out 1s;
+  display: block;
 }

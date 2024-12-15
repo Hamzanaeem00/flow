@@ -39,21 +39,17 @@ export default function Header() {
   };
 
   return (
-    <React.Fragment>
-      <section className="max-w-[95vw] mx-auto md:flex nav_section_hide">
-        <nav
-          className={`  fixed top-5 min-w-[95vw] mx-auto  rounded-full  transition-all duration-300
-      ${isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-black"}`}
-        >
-          <div className=" px-2 sm:px-2 w-full">
-            <div className="flex items-center justify-between h-16">
-              {/* Logo */}
-              <NavLink
-                href="/"
-                className="text-white text-2xl font-semibold px-2 sm:px-2"
-              >
-                flow<span className="text-aqua">.</span>
-              </NavLink>
+    <section className="max-w-[95vw] mx-auto">
+    <nav className={
+      `  fixed top-5 min-w-[95vw] mx-auto  rounded-full  transition-all duration-300
+      ${isScrolled ? "bg-black/80 backdrop-blur-sm" : "bg-black"}`
+    }>
+      <div className=" px-2 sm:px-2 w-full">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <NavLink href="/" className="text-white text-2xl font-semibold px-2 sm:px-2">
+            flow<span className="text-aqua">.</span>
+          </NavLink>
 
               {/* Navigation Links */}
               <div className=" md:flex items-center space-x-8">

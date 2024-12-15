@@ -1,55 +1,66 @@
-import {
-  ChevronDown,
-  ChevronDownCircle,
-  Instagram,
-  Music,
-  Play,
-} from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
-import social from "../assets/images/socialimage.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import FontAwesomeIcon
-import { faPlay } from "@fortawesome/free-solid-svg-icons"; // Import the specific icon
-import emoji from "../assets/images/pinkk.png";
+import { ChevronDown, ChevronDownCircle, Instagram, Music } from "lucide-react";
+import React, { useEffect, useRef } from "react";
+import emoji from "../assets/images/pink.svg";
 import here from "../assets/images/heree.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Video from "./Video";
+
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const SocialBanner = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const imgRef = useRef(null);
   const hereimgRef = useRef(null);
 
   useEffect(() => {
-    // Initialize GSAP animation
-    gsap.fromTo(
-      imgRef.current,
-      { x: -200, opacity: 0 }, // Start position (off-screen left)
-      {
-        x: 0, // End position (original position)
-        opacity: 1,
-        duration: 1, // Animation duration
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: imgRef.current, // Element to trigger the animation
-          start: "top 80%", // Start when top of image is 80% down the viewport
-          toggleActions: "play none none none", // Play only when scrolled into view
-        },
-      }
-    );
+    // Animation for imgRef
+    ScrollTrigger.create({
+      trigger: imgRef.current, // Element to watch
+      start: "top 80%", // Start animation when the top of the image is at 80% viewport height
+      scrub: 2,
 
-    gsap.fromTo(
-      hereimgRef.current,
-      { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
-      {
-        clipPath: "inset(0% 0% 0% 0%)", // Full visibility
-        opacity: 1,
-        duration: 2, // Animation duration
-        ease: "power2.out",
-      }
-    );
+      onEnter: () => {
+        gsap.fromTo(
+          imgRef.current,
+          { x: -200, opacity: 0 }, // Start position
+          { x: 0, opacity: 1, duration: 3, ease: "power3.out" } // End position
+        );
+      },
+      onEnterBack: () => {
+        gsap.fromTo(
+          imgRef.current,
+          { x: -200, opacity: 0 }, // Start position
+          { x: 0, opacity: 1, duration: 3, ease: "power3.out" } // End position
+        );
+      },
+    });
+
+    // Animation for hereimgRef
+    ScrollTrigger.create({
+      trigger: hereimgRef.current,
+      start: "top 80%",
+      scrub: 2,
+
+      onEnter: () => {
+        gsap.fromTo(
+          hereimgRef.current,
+          { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
+          { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 3, ease: "power2.out" } // End point
+        );
+      },
+      onEnterBack: () => {
+        gsap.fromTo(
+          hereimgRef.current,
+          { clipPath: "inset(50% 50% 50% 50%)", opacity: 0 }, // Start point
+          { clipPath: "inset(0% 0% 0% 0%)", opacity: 1, duration: 3, ease: "power2.out" } // End point
+        );
+      },
+    });
   }, []);
+
+
+
 
   return (
     <div>
@@ -97,13 +108,15 @@ const SocialBanner = () => {
               </div>
             </div>
             <div className="mt-7">
-              <span className=" tracking-tight lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
+              <span className=" lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
                 in the{" "}
               </span>
               <span className=" tracking-tighter text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl text-gray-300">
                 social media
               </span>
             </div>
+
+            {/* for small screens */}
 
             <div className="grid grid-cols-12 gap-4 items-center p-8 lg:hidden xl:hidden 2xl:hidden">
               {/* Left Icon */}
@@ -137,11 +150,21 @@ const SocialBanner = () => {
                     here!
                     {/* Pink oval */}
                     <span
-                      className="absolute inset-0 -top-2 -left-5 w-full h-full border-4 border-pink-500 rounded-full z-[-1]"
+                      className="absolute inset-0 -top-2 -left-5 w-full h-full  rounded-full z-[-1]"
                       style={{
                         transform: "rotate(-12deg)",
                       }}
-                    ></span>
+                    >
+                      <img
+                        loading="lazy"
+                        ref={hereimgRef}
+                        src={here}
+                        alt="Animated"
+                        style={{
+                          maxWidth: "250px",
+                        }}
+                      />
+                    </span>
                   </span>
                 </span>
               </div>
@@ -159,20 +182,16 @@ const SocialBanner = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center relative socail-media mt-6">
-            <div className="flex justify-end absolute right-[-12px] top-[-12px] px-2 h-10  bg-black rounded-full flex items-center justify-center">
-              <FontAwesomeIcon className="w-6 h-3 text-white" icon={faPlay} />
-            </div>
-            <img
-              src={social}
-              className="w-full rounded-3xl h-[160px] shadow-lg"
-            />
+          <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center relative  mt-6">
+            <Video />
           </div>
         </div>
+
         <div className="grid grid-cols-12 gap-4 items-center  md:hidden sm:hidden xs:hidden">
           {/* Left Icon */}
           <div className="col-span-2 flex items-center justify-center cursor-pointer">
             <img
+              loading="lazy"
               src={emoji}
               alt="Animated emoji"
               ref={imgRef}
@@ -216,7 +235,7 @@ const SocialBanner = () => {
           </div>
 
           {/* Text Content */}
-          <div className="col-span-8 flex mt-[-20px]">
+          <div className="col-span-9 flex mt-[-20px]">
             <span className="relative tracking-tight  text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl">
               world starts{" "}
               <span className="relative inline-block ">
@@ -230,6 +249,7 @@ const SocialBanner = () => {
                   }}
                 >
                   <img
+                    loading="lazy"
                     ref={hereimgRef}
                     src={here}
                     alt="Animated"
@@ -240,16 +260,16 @@ const SocialBanner = () => {
                 </span>
               </span>
             </span>
-          </div>
-          <div
-            className="col-span-2 mx-3 sm-font relative"
-            style={{
-              transform: "rotate(-25deg)",
-            }}
-          >
-            <span className=" text-pink-500 text-sm font-bold italic absolute bottom-10">
-              SMM from <br /> professionals
-            </span>
+            <div
+              className=" mx-20 sm-font relative"
+              style={{
+                transform: "rotate(-25deg)",
+              }}
+            >
+              <span className=" text-pink-500 text-sm font-bold italic absolute bottom-10">
+                SMM from <br /> professionals
+              </span>
+            </div>
           </div>
         </div>
       </div>
