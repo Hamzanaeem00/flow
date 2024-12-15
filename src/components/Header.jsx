@@ -105,7 +105,7 @@ export default function Header() {
         </nav>
       </section>
       {/* Mobile View Section */}
-      <div className="hidden mobile-navigation pt-4 pb-1 pl-4 border fixed top-0 w-full bg-black ">
+      <div className="hidden mobile-navigation pt-4 pb-1 pl-4 border-b fixed top-0 w-full bg-black">
         <FontAwesomeIcon
           onClick={() => setIsOpen(!isOpen)}
           icon={faBars}
@@ -120,11 +120,11 @@ export default function Header() {
           >
             <div className=" px-2 sm:px-2 w-full">
               <div className="flex flex-col items-center gap-10 justify-between h-16">
-                <div className="flex">
+                <div className="flex border-b w-full text-center justify-center">
                   {/* Logo */}
                   <NavLink
                     href="/"
-                    className="text-white text-2xl font-medium px-2 sm:px-2"
+                    className=" text-pink-500 text-2xl font-semibold -tracking-tighter px-2 sm:px-2"
                   >
                     flow<span className="text-aqua">.</span>
                   </NavLink>
