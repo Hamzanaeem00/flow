@@ -57,7 +57,7 @@ const Faq = () => {
             <h2 className="text-lg font-normal">{item.title}</h2>
             <span
               className={`text-2xl transition-transform duration-300 ${
-                activeIndex === index ? "rotate-45 text-pink-500" : ""
+                activeIndex === index ? " text-pink-500" : ""
               }`}
             >
               {activeIndex === index ? "✖" : "+"}
