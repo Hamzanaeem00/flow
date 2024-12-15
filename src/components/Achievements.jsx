@@ -65,7 +65,7 @@ const Achievements = () => {
 
   return (
     <div className="max-w-[85vw] mx-auto px-6 py-16">
-      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-6">
         {cardsData.map((card, index) => (
           <div
             key={index}

@@ -23,30 +23,46 @@ const Accordion = () => {
   };
 
   return (
-    <div className=" mx-auto p-4">
+    <div className=" mx-auto p-6">
+      {/* Accordion List */}
       {accordionData.map((item, index) => (
-        <div
-          key={index}
-          className="border-b border-gray-300 py-4 flex flex-col"
-        >
+        <div key={index} className="border-b border-gray-300">
+          {/* Header */}
           <div
-            className="flex justify-between items-center cursor-pointer"
+            className="flex justify-between items-center py-4 cursor-pointer transition-all duration-300 hover:text-pink-500"
             onClick={() => handleToggle(index)}
           >
-            <span className="text-lg font-medium">{item.title}</span>
-            <span className="text-3xl font-thin">
-              {activeIndex === index ? "-" : "+"}
+            <h2 className="text-lg font-semibold">{item.title}</h2>
+            <span
+              className={`text-3xl font-thin transform transition-transform duration-300 ${
+                activeIndex === index ? " text-pink-500" : ""
+              }`}
+            >
+              {activeIndex === index ? "_" : "+"}
             </span>
           </div>
-          {activeIndex === index && (
-            <div className="mt-2 text-gray-600">{item.content}</div>
-          )}
+          {/* Content */}
+          <div
+            className={`overflow-hidden transition-max-height duration-500 ease-in-out ${
+              activeIndex === index ? "max-h-40" : "max-h-0"
+            }`}
+          >
+            <p className="text-gray-600 leading-relaxed py-2">
+              {item.content}
+            </p>
+          </div>
         </div>
       ))}
 
-      {/* Button at the bottom */}
+      {/* Button at the Bottom */}
       <div className="flex justify-center mt-6">
-        <Button text="Learn more" backgroundColor="bg-black"  borderRadius="rounded-full" textColor="text-white" padding="p-4"/>
+        <Button
+          text="Learn more"
+          backgroundColor="bg-black"
+          borderRadius="rounded-full"
+          textColor="text-white"
+          padding="p-4"
+        />
       </div>
     </div>
   );
