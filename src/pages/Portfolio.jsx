@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import here from "../assets/images/heree.png";
-import girl2 from "../assets/images/girl2.jpg";
+import girl2 from "../assets/images/girl2.png";
 import Button from "../components/Button";
 
 const previousGrowthArray = [
