@@ -62,11 +62,11 @@ const Services = () => {
       {
         x: 0,
         opacity: 1,
-        duration: 3,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
           trigger: imageSectionRef.current,
-          start: "top 30%", // When the top of the section reaches 30% of the viewport
+          // start: "top 80%", // When the top of the section reaches 80% of the viewport
         },
       }
     );
@@ -78,10 +78,10 @@ const Services = () => {
         x: 0,
         opacity: 1,
         duration: 1,
-        ease: "power2.out",
+        // ease: "power2.out",
         scrollTrigger: {
           trigger: collapseSectionRef.current,
-          start: "top 30%", // When the top of the section reaches 30% of the viewport
+          // start: "top 80%", // When the top of the section reaches 80% of the viewport
         },
       }
     );
