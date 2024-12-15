@@ -59,7 +59,7 @@ const options = { loop: true }
 
   return (
     <div className="embla max-w-[75vw] mt-20 mx-auto ">
-      <div className="embla__viewport" ref={emblaRef}>
+      <div className="embla__viewport grid"  ref={emblaRef}>
         <div className="embla__container ">
           {slides?.map((blog) => (
             <div key={blog.id} className='embla__slide '>
