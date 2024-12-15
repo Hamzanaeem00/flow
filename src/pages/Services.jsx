@@ -97,7 +97,7 @@ const Services = () => {
   };
 
   return (
-    <div className="services-box grid grid-cols-12 gap-4">
+    <div className=" max-w-[85vw] mx-auto grid grid-cols-12 gap-4" id="services">
       {/* Image Section On LeftSide */}
       <div
         ref={imageSectionRef}
@@ -110,7 +110,7 @@ const Services = () => {
         ref={collapseSectionRef}
         className="col-span-7 xs:col-span-12 sm:col-span-12 md:col-span-6 xs:mt-12 sm:mt-10"
       >
-        <h2 className="text-6xl xs:text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-medium mb-12 xs:mb-4 sm:mb-5">
+        <h2 className="text-5xl xs:text-4xl sm:text-4xl md:text-4xl lg:text-5xl font-medium mb-12 xs:mb-4 sm:mb-5">
           Revealing the secrets{" "}
           <br className="xs:hidden sm:hidden md:hidden lg:hidden" /> of our
           achievements

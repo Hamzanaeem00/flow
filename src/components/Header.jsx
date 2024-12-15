@@ -1,6 +1,5 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -34,13 +33,19 @@ export default function Header() {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      // Get the element's position and subtract 20vh from the current scroll position
+      const yOffset = -window.innerHeight * 0.2; // Convert -20vh to pixels
+      const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+      // Smooth scroll to the position
+      window.scrollTo({ top: yPosition, behavior: "smooth" });
     }
   };
+  
 
   return (
     <React.Fragment>
-      <section className="max-w-[95vw] mx-auto md:flex nav_section_hide">
+      <section className="max-w-[95vw] mx-auto md:flex nav_section_hide" >
         <nav
           className={`  fixed top-5 min-w-[95vw] mx-auto nav-bar  rounded-full  transition-all duration-300
       ${isScrolled ? "bg-black backdrop-blur-sm" : "bg-black"}`}
@@ -48,12 +53,13 @@ export default function Header() {
           <div className=" px-2 sm:px-2 w-full">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
-              <NavLink
-                href="/"
+              <button
+                  onClick={() => scrollToSection("/")}
+
                 className="text-white text-2xl font-semibold px-2 sm:px-2"
               >
                 flow<span className="text-aqua">.</span>
-              </NavLink>
+              </button>
 
               {/* Navigation Links */}
               <div className=" md:flex items-center space-x-8">
@@ -63,30 +69,34 @@ export default function Header() {
                 >
                   About us
                 </button>
-                <NavLink
-                  href="/services"
+
+                <button
+                  onClick={() => scrollToSection("services")}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   Services
-                </NavLink>
-                <NavLink
-                  href="/portfolio"
+                </button>
+                <button
+                                   onClick={() => scrollToSection("portfoilo")}
+
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   Portfolio
-                </NavLink>
-                <NavLink
-                  href="/faq"
+                </button>
+                <button
+                                   onClick={() => scrollToSection("faq")}
+
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   FAQ
-                </NavLink>
-                <NavLink
-                  href="/blog"
+                </button>
+                <button
+                                    onClick={() => scrollToSection("blog")}
+
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   Blog
-                </NavLink>
+                </button>
               </div>
 
               {/* Contact Button */}
@@ -94,6 +104,7 @@ export default function Header() {
             Contact us
           </button> */}
               <Button
+                  onClick={() => scrollToSection("contact")}
                 text="Contact us"
                 backgroundColor="bg-white"
                 textColor="text-black"
@@ -122,12 +133,14 @@ export default function Header() {
               <div className="flex flex-col items-center gap-10 justify-between h-16">
                 <div className="flex border-b w-full text-center justify-center">
                   {/* Logo */}
-                  <NavLink
-                    href="/"
+                  <button
+                   
+                    onClick={() => scrollToSection("/")}
+                    
                     className=" text-pink-500 text-2xl font-semibold -tracking-tighter px-2 sm:px-2"
                   >
                     flow<span className="text-aqua">.</span>
-                  </NavLink>
+                  </button>
                   {/* <h1 className="text-white rotate-45 text-2xl">+</h1> */}
                 </div>
 
@@ -139,37 +152,40 @@ export default function Header() {
                   >
                     About us
                   </button>
-                  <NavLink
-                    href="/services"
+                  <button
+                    onClick={() => scrollToSection("services")}
+                   // href="/services"
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     Services
-                  </NavLink>
-                  <NavLink
-                    href="/portfolio"
+                  </button>
+                  <button
+                                      onClick={() => scrollToSection("portfoilo")}
+
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     Portfolio
-                  </NavLink>
-                  <NavLink
-                    href="/faq"
+                  </button>
+                  <button
+                                     onClick={() => scrollToSection("faq")}
+
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     FAQ
-                  </NavLink>
-                  <NavLink
-                    href="/blog"
+                  </button>
+                  <button
+                                      onClick={() => scrollToSection("blog")}
+
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     Blog
-                  </NavLink>
+                  </button>
                 </div>
 
-                {/* Contact Button */}
-                {/* <button variant="secondary" className="bg-white text-black hover:bg-gray-100">
-     Contact us
-   </button> */}
+
                 <Button
+                  onClick={() => scrollToSection("contact")}
+
                   text="Contact us"
                   backgroundColor="bg-white"
                   textColor="text-black"

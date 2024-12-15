@@ -1,4 +1,5 @@
 import './App.css'
+import Header from './components/Header'
 import About from './pages/About'
 import EmblaCarousel from './pages/BlogCaurosal'
 import Contact from './pages/Contact'
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <div className='font-inter'>
+        <Header />
        <Home />
        <About />
        <Services />

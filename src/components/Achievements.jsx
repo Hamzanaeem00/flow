@@ -37,19 +37,7 @@ const Achievements = () => {
                 }
               );
             },
-            // onEnterBack: () => {
-            //   // Trigger when scrolling back into view
-            //   gsap.fromTo(
-            //     card,
-            //     { y: -100, opacity: 0 }, // Start position
-            //     {
-            //       y: 0,
-            //       opacity: 1,
-            //       duration: 2,
-            //       ease: "bounce.out",
-            //     }
-            //   );
-            // },
+
           },
         }
       );
@@ -64,7 +52,7 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="max-w-[85vw] mx-auto px-6 py-16">
+    <div className="max-w-[85vw] mx-auto px-6 py-10">
       <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-6">
         {cardsData.map((card, index) => (
           <div
@@ -80,8 +68,8 @@ const Achievements = () => {
         ))}
       </div>
        {/* Text Section */}
-       <div className="mt-16 text-center max-w-4xl mx-auto relative">
-        <p className="text-3xl lg:text-2xl leading-relaxed">
+       <div className="mt-6 text-center max-w-4xl mx-auto relative">
+        <p className="text-2xl lg:text-2xl leading-relaxed">
           We are a team of professionals dedicated to the art of <br />{" "}
           <span className="relative underline text-pink-500">social media</span>.{" "}
           We turn ideas into reality, building impressive online stories and

@@ -71,7 +71,7 @@ const SocialBanner = () => {
 
   return (
     <div>
-      <div className="  cursor-pointer mt-40  ">
+      <div className="  cursor-pointer mt-40" id="/">
         <div className=" max-w-[85vw] mx-auto grid grid-cols-12 gap-0 ">
           <div className="col-span-8 lg:col-span-9 md:col-span-12 sm:col-span-12 xs:col-span-12 ">
             {/* Icons  */}

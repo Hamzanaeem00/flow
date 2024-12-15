@@ -55,8 +55,8 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="porfolio-box">
-      <h2 className="text-center xs:text-left sm:text-left text-6xl xs:text-4xl sm:text-5xl font-medium mb-12 xs:mb-8 sm:mb-10">
+    <div className="max-w-[85vw] mx-auto mt-20" id="portfoilo">
+      <h2 className="text-center xs:text-left sm:text-left text-5xl xs:text-4xl sm:text-5xl font-medium mb-12 xs:mb-8 sm:mb-10">
         We turn{" "}
         <span className="relative inline-block">
           ideas

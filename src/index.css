@@ -67,13 +67,11 @@ body {
 }
 
 /* ====================================  services section start ======================================== */
-.services-box {
-  padding: 70px 100px;
-}
+
 /* ====> image section start */
 .happy-customer-card {
   background-color: #49f7f2;
-  width: 350px;
+  width: 340px;
   height: 190px;
   border-radius: 100px;
 }
@@ -128,9 +126,9 @@ body {
 /* ======================================== services section end =========================================== */
 
 /* ======================================== porfolio section start =========================================== */
-.porfolio-box {
+/* .porfolio-box {
   padding: 70px 100px;
-}
+} */
 /* ======================================== porfolio section end =========================================== */
 
 @keyframes leftToRight {
