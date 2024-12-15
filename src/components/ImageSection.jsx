@@ -4,7 +4,7 @@ import face1 from "../assets/images/face1.jpg";
 import face2 from "../assets/images/face2.jpg";
 import face3 from "../assets/images/face3.jpg";
 import mobile from "../assets/images/mobile.jpg";
-import instagram from "../assets/images/instagram.jpeg";
+import instagram from "../assets/images/instagram.jpg";
 import girl1 from "../assets/images/girl1.jpg";
 
 const ImageSection = () => {
