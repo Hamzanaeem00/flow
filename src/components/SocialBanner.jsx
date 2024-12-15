@@ -85,7 +85,7 @@ const SocialBanner = () => {
                 {/* Instagram Icon */}
               </div>
               <div>
-                <span className="text-8xl lg:text-7xl relative socail-media  md:text-7xl sm:text-5xl xs:text-3xl ml-5">
+                <span className="text-8xl lg:text-7xl relative md:text-7xl sm:text-5xl xs:text-3xl ml-5">
                   {"Your success "} <br />
                   <span className="absolute top-0 right-28 right-[-15px] flex flex-col">
                     {/* First Arc */}
@@ -189,7 +189,7 @@ const SocialBanner = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center relative socail-media mt-6">
+          <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center socail-media relative mt-6">
             <Video />
           </div>
         </div>

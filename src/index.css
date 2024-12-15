@@ -242,6 +242,12 @@ body {
   .socail-media {
    position: unset;
   }
+  .social-media-container {
+    position: absolute;
+    bottom: 0% !important;
+    top: 66%;
+    right: 3%;
+  }
 }
 
 
