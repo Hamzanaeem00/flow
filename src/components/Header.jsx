@@ -45,12 +45,15 @@ export default function Header() {
 
   return (
     <React.Fragment>
+      <div
+        className={`xs:hidden sm:hidden fixed top-0 pt-5 min-w-[100vw] z-10 bg-white`}
+      ></div>
       <section className="max-w-[95vw] mx-auto md:flex nav_section_hide">
         <nav
-          className={`  fixed top-5 min-w-[95vw] mx-auto nav-bar  rounded-full  transition-all duration-300
+          className={`fixed top-5 min-w-[95vw] mx-auto nav-bar  rounded-full  transition-all duration-300
       ${isScrolled ? "bg-black backdrop-blur-sm" : "bg-black"}`}
         >
-          <div className=" px-2 sm:px-2 w-full">
+          <div className="px-2 sm:px-2 w-full">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
               <button
