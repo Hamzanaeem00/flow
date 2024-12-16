@@ -248,6 +248,13 @@ body {
   }
 }
 
+.service-img{
+  top: -20px;
+  left: -26px;
+  height: 200px;
+  max-width: fit-content;
+}
+
 
 
 /* embla */
