@@ -91,7 +91,7 @@ const options = { loop: true }
       </div>
 
       <div className="embla__controls">
-        <div className="grid grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-2 gap-4 z-0">
           <PrevButton
             onClick={() => onButtonAutoplayClick(onPrevButtonClick)}
             disabled={prevBtnDisabled}
