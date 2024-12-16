@@ -5,7 +5,7 @@ const ContactForm = () => {
     <div className="rounded-3xl col-span-2 py-4 bg-black">
       <div className="bg-black text-white p-8 rounded-lg w-full ">
         {/* Title */}
-        <h1 className="text-4xl font-semibold mb-6">Let’s work together</h1>
+        <h1 className="text-5xl font-normal p-4">Let’s work together</h1>
 
         {/* Form */}
         <form className="space-y-4">
