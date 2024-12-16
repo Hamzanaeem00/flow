@@ -248,6 +248,13 @@ body {
   }
 }
 
+.service-img{
+  top: -30px;
+  left: -26px;
+  height: 200px;
+  max-width: fit-content;
+}
+
 
 
 /* embla */
@@ -291,6 +298,9 @@ body {
   justify-content: center;
   gap: 1.2rem;
   margin-top: 1.8rem;
+  position: relative;
+  z-index: -1;
+
 }
 .embla__buttons {
   display: grid;

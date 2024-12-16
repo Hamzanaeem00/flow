@@ -20,31 +20,31 @@ const items = [
     key: "1",
     label: "STRATEGIC PLANNING",
     children: <div>Content for Strategic Planning</div>,
-    leftIcon: <EarthLock className="text-[#757575]" />,
+    leftIcon: <EarthLock className="text-gray-700" />,
   },
   {
     key: "2",
     label: "MANAGEMENT OF SOCIAL NETWORKS",
     children: <div>Content for Social Networks</div>,
-    leftIcon: <Webhook className="text-[#757575]" />,
+    leftIcon: <Webhook className="text-gray-700" />,
   },
   {
     key: "3",
     label: "CONTENT CREATION",
     children: <div>Content for Content Creation</div>,
-    leftIcon: <Activity className="text-[#757575]" />,
+    leftIcon: <Activity className="text-gray-700" />,
   },
   {
     key: "4",
     label: "CONSULTATION AND TRAINING",
     children: <div>Content for Consultation and Training</div>,
-    leftIcon: <Settings className="text-[#757575]" />,
+    leftIcon: <Settings className="text-gray-700" />,
   },
   {
     key: "5",
     label: "ANALYTICS AND REPORTING",
     children: <div>Content for Analytics and Reporting</div>,
-    leftIcon: <ChartScatter className="text-[#757575]" />,
+    leftIcon: <ChartScatter className="text-gray-700" />,
   },
 ];
 
