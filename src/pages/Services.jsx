@@ -52,7 +52,6 @@ const Services = () => {
   const isMobile = useMediaQuery({
     query: "(max-width: 768px)",
   });
-  console.log(isMobile);
 
   const [activePanel, setActivePanel] = useState(null);
 

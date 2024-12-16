@@ -35,17 +35,17 @@ export default function Header() {
     if (element) {
       // Get the element's position and subtract 20vh from the current scroll position
       const yOffset = -window.innerHeight * 0.2; // Convert -20vh to pixels
-      const yPosition = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
+      const yPosition =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
       // Smooth scroll to the position
       window.scrollTo({ top: yPosition, behavior: "smooth" });
     }
   };
-  
 
   return (
     <React.Fragment>
-      <section className="max-w-[95vw] mx-auto md:flex nav_section_hide" >
+      <section className="max-w-[95vw] mx-auto md:flex nav_section_hide">
         <nav
           className={`  fixed top-5 min-w-[95vw] mx-auto nav-bar  rounded-full  transition-all duration-300
       ${isScrolled ? "bg-black backdrop-blur-sm" : "bg-black"}`}
@@ -54,8 +54,7 @@ export default function Header() {
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
               <button
-                  onClick={() => scrollToSection("/")}
-
+                onClick={() => scrollToSection("/")}
                 className="text-white text-2xl font-semibold px-2 sm:px-2"
               >
                 flow<span className="text-aqua">.</span>
@@ -77,22 +76,19 @@ export default function Header() {
                   Services
                 </button>
                 <button
-                                   onClick={() => scrollToSection("portfoilo")}
-
+                  onClick={() => scrollToSection("portfoilo")}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   Portfolio
                 </button>
                 <button
-                                   onClick={() => scrollToSection("faq")}
-
+                  onClick={() => scrollToSection("faq")}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   FAQ
                 </button>
                 <button
-                                    onClick={() => scrollToSection("blog")}
-
+                  onClick={() => scrollToSection("blog")}
                   className="text-white hover:text-gray-300 transition-colors"
                 >
                   Blog
@@ -104,7 +100,7 @@ export default function Header() {
             Contact us
           </button> */}
               <Button
-                  onClick={() => scrollToSection("contact")}
+                onClick={() => scrollToSection("contact")}
                 text="Contact us"
                 backgroundColor="bg-white"
                 textColor="text-black"
@@ -116,7 +112,10 @@ export default function Header() {
         </nav>
       </section>
       {/* Mobile View Section */}
-      <div className="hidden mobile-navigation pt-4 pb-1 pl-4 border-b fixed top-0 w-full bg-black">
+      <div
+        className="hidden mobile-navigation pt-4 pb-1 pl-4 border-b fixed top-0 w-full bg-black"
+        style={{ zIndex: "1000" }}
+      >
         <FontAwesomeIcon
           onClick={() => setIsOpen(!isOpen)}
           icon={faBars}
@@ -134,9 +133,7 @@ export default function Header() {
                 <div className="flex border-b w-full text-center justify-center">
                   {/* Logo */}
                   <button
-                   
                     onClick={() => scrollToSection("/")}
-                    
                     className=" text-pink-500 text-2xl font-semibold -tracking-tighter px-2 sm:px-2"
                   >
                     flow<span className="text-aqua">.</span>
@@ -154,38 +151,33 @@ export default function Header() {
                   </button>
                   <button
                     onClick={() => scrollToSection("services")}
-                   // href="/services"
+                    // href="/services"
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     Services
                   </button>
                   <button
-                                      onClick={() => scrollToSection("portfoilo")}
-
+                    onClick={() => scrollToSection("portfoilo")}
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     Portfolio
                   </button>
                   <button
-                                     onClick={() => scrollToSection("faq")}
-
+                    onClick={() => scrollToSection("faq")}
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     FAQ
                   </button>
                   <button
-                                      onClick={() => scrollToSection("blog")}
-
+                    onClick={() => scrollToSection("blog")}
                     className="text-white hover:text-gray-300 transition-colors"
                   >
                     Blog
                   </button>
                 </div>
 
-
                 <Button
                   onClick={() => scrollToSection("contact")}
-
                   text="Contact us"
                   backgroundColor="bg-white"
                   textColor="text-black"

@@ -14,7 +14,7 @@ const Video = () => {
       <img
         loading="lazy"
         src={social}
-        className="w-full rounded-3xl h-[190px] shadow-lg"
+        className="w-full rounded-3xl h-[190px] xs:h-[200px] sm:h-[250px] shadow-lg"
       />
     </>
   );

@@ -1,15 +1,19 @@
-import {  Instagram, Music } from "lucide-react";
+import { Instagram, Music } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import emoji from "../assets/images/pink.svg";
 import here from "../assets/images/heree.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Video from "./Video";
+import { useMediaQuery } from "react-responsive";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const SocialBanner = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
   const imgRef = useRef(null);
   const hereimgRef = useRef(null);
 
@@ -71,9 +75,9 @@ const SocialBanner = () => {
 
   return (
     <div>
-      <div className="  cursor-pointer mt-40" id="/">
+      <div className="  cursor-pointer mt-40 sm:mt-20 sm:pt-10" id="/">
         <div className=" max-w-[85vw] mx-auto grid grid-cols-12 gap-0 ">
-          <div className="col-span-8 lg:col-span-9 md:col-span-12 sm:col-span-12 xs:col-span-12 ">
+          <div className="xs:hidden sm:hidden col-span-8 lg:col-span-9 md:col-span-12 sm:col-span-12 xs:col-span-12 ">
             {/* Icons  */}
             <div className="icon flex ">
               <div className="bg-lightGray   hover:bg-black hover:scale-125  transition duration-150 ease-in-out  text-white flex items-center justify-center rounded-full w-20 h-20">
@@ -115,10 +119,10 @@ const SocialBanner = () => {
               </div>
             </div>
             <div className="mt-7">
-              <span className=" lg:text-7xl  text-8xl md:text-7xl sm:text-5xl xs:text-3xl ">
+              <span className="text-8xl lg:text-7xl relative md:text-7xl sm:text-5xl xs:text-3xl">
                 in the{" "}
               </span>
-              <span className=" tracking-tighter text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl text-gray-300">
+              <span className="tracking-tighter text-8xl lg:text-7xl relative md:text-7xl sm:text-5xl xs:text-3xl text-gray-300">
                 social media
               </span>
             </div>
@@ -150,7 +154,7 @@ const SocialBanner = () => {
 
               {/* Text Content */}
               <div className="col-span-9 flex mt-[-20px]  ">
-                <span className="relative socail-media tracking-tight  text-8xl lg:text-7xl  md:text-7xl sm:text-4xl xs:text-3xl">
+                <span className="relative socail-media tracking-tight text-8xl lg:text-7xl relative md:text-7xl sm:text-5xl xs:text-3xl">
                   world starts{" "}
                   <span className="relative inline-block ">
                     {" "}
@@ -188,6 +192,20 @@ const SocialBanner = () => {
                 </span>
               </div>
             </div>
+          </div>
+
+          <div className="hidden xs:block sm:block sm:col-span-12 xs:col-span-12 sm:text-5xl xs:text-3xl mb-5">
+            <div className="flex justify-center mb-5">
+              <div className="bg-lightGray   hover:bg-black hover:scale-125  transition duration-150 ease-in-out  text-white flex items-center justify-center rounded-full w-20 h-20">
+                {/* TikTok Icon (use any SVG or library like Font Awesome) */}
+                <Music className="w-8 h-8 text-black hover:text-white" />
+              </div>
+              <div className="bg-lightGray hover:bg-black hover:scale-125 hover:text-white  transition duration-150 ease-in-out text-white flex items-center justify-center rounded-full w-20 h-20">
+                <Instagram className="w-8 h-8 text-black hover:text-white" />
+                {/* Instagram Icon */}
+              </div>
+            </div>
+            Your success in the social media world starts here!
           </div>
           <div className="col-span-3 lg:col-span-3 md:col-span-12 sm:col-span-12 xs:col-span-12 md:text-center socail-media relative mt-6">
             <Video />
