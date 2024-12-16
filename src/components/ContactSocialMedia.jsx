@@ -31,6 +31,7 @@ const ContactSocialMedia = () => {
       <p className="text-pink-700 font-semibold text-xs text-lg absolute top-10 left-16 "  style={{
                    
                     transform: "rotate(-30deg)",
+                    fontFamily:'Inter',
                   }}>
             Do you have <br /> any questions?
           </p>

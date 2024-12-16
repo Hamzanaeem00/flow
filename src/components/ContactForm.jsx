@@ -15,14 +15,14 @@ const ContactForm = () => {
               type="text"
               placeholder="FULL NAME"
               className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
-               outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:font-light
+               outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
               "
             />
             <input
               type="email"
               placeholder="EMAIL"
               className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
-               outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:font-light
+               outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
               "
             />
           </div>
@@ -33,7 +33,7 @@ const ContactForm = () => {
             rows="4"
             className="w-full min-h-[120px] bg-inputColor text-white p-3 rounded-2xl
              placeholder-gray-400 focus:outline-none
-             outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:font-light
+             outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
              "
           ></input>
 
@@ -43,12 +43,12 @@ const ContactForm = () => {
               type="submit"
               className="rounded-full border font-sans bg-white border-white/50 max-w-[170px] px-8 py-4 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group font-semibold"
             >
-              <span className="group-hover:translate-y-[120%] font-sans group-hover:opacity-0 transition-all duration-500 text-black">
-                Let's talk
+              <span className="group-hover:translate-y-[120%] group-hover:opacity-0 transition-all duration-500 text-black">
+               Send
               </span>
               <p className="-translate-y-[120%] font-sans text-black opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100
-               transition-all duration-300 absolute text-[22px] font-semibold">
-                Send
+               transition-all duration-300 absolute  font-semibold">
+                let's talk
               </p>
             </button>
             <p className="text-sm text-gray-600 mx-4 w-60">
