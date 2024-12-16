@@ -80,7 +80,7 @@ const SocialBanner = () => {
           <div className="xs:hidden sm:hidden col-span-8 lg:col-span-9 md:col-span-12 sm:col-span-12 xs:col-span-12 ">
             {/* Icons  */}
             <div className="icon flex ">
-              <div className="bg-lightGray   hover:bg-black hover:scale-125  transition duration-150 ease-in-out  text-white flex items-center justify-center rounded-full w-20 h-20">
+              <div className="bg-lightGray hover:bg-black hover:scale-125  transition duration-150 ease-in-out  text-white flex items-center justify-center rounded-full w-20 h-20">
                 {/* TikTok Icon (use any SVG or library like Font Awesome) */}
                 <Music className="w-8 h-8 text-black hover:text-white" />
               </div>

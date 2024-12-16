@@ -22,6 +22,11 @@ export default {
         redColor: "#FF5959",
         inputColor: "#191919"
       },
+      fontFamily: {
+        mono: ['Fira Code', 'monospace'],
+        sans: ['Poppins','sans-serif'],
+        inter: ['Times New Roman', 'Times New Roman'],
+      }
     },
   },
   plugins: [],
