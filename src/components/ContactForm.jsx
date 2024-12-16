@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const ContactForm = () => {
   return (
-    <div className="rounded-3xl col-span-2 py-2 bg-black">
-      <div className="bg-black text-white p-8 rounded-lg w-full ">
+    <div className="rounded-3xl col-span-2 py-2 bg-black font-sans ">
+      <div className="bg-black text-white p-8 rounded-3xl w-full ">
         {/* Title */}
-        <h1 className="text-5xl font-normal p-2 mb-2">Let’s work together</h1>
+        <h1 className="text-5xl font-normal p-2 mb-2 font-sans">Let’s work together</h1>
 
         {/* Form */}
         <form className="space-y-4">
@@ -14,12 +14,16 @@ const ContactForm = () => {
             <input
               type="text"
               placeholder="FULL NAME"
-              className="w-full bg-inputColor text-white p-3 rounded-2xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
+               outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:font-light
+              "
             />
             <input
               type="email"
               placeholder="EMAIL"
-              className="w-full bg-inputColor text-white p-3 rounded-2xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
+               outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:font-light
+              "
             />
           </div>
 
@@ -27,18 +31,27 @@ const ContactForm = () => {
           <input
             placeholder="MESSAGE"
             rows="4"
-            className="w-full h-[120px] bg-inputColor text-white p-3 rounded-2xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white"
+            className="w-full min-h-[120px] bg-inputColor text-white p-3 rounded-2xl
+             placeholder-gray-400 focus:outline-none
+             outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:font-light
+             "
           ></input>
 
           {/* Send Button and Privacy Notice */}
           <div className="flex items-center justify-start">
             <button
               type="submit"
-              className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition"
+              className="rounded-full border font-sans bg-white border-white/50 max-w-[170px] px-8 py-4 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group font-semibold"
             >
-              Send
+              <span className="group-hover:translate-y-[120%] font-sans group-hover:opacity-0 transition-all duration-500 text-black">
+                Let's talk
+              </span>
+              <p className="-translate-y-[120%] font-sans text-black opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100
+               transition-all duration-300 absolute text-[22px] font-semibold">
+                Send
+              </p>
             </button>
-            <p className="text-sm text-gray-600 mx-4 w-60 ">
+            <p className="text-sm text-gray-600 mx-4 w-60">
               By clicking the button “send”, you agree with{" "}
               <span className="underline cursor-pointer">
                 privacy policy terms
@@ -48,7 +61,7 @@ const ContactForm = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
