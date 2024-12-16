@@ -2,10 +2,10 @@ import React from 'react'
 
 const ContactForm = () => {
   return (
-    <div className="rounded-3xl col-span-2 py-4 bg-black">
+    <div className="rounded-3xl col-span-2 py-2 bg-black">
       <div className="bg-black text-white p-8 rounded-lg w-full ">
         {/* Title */}
-        <h1 className="text-5xl font-normal p-4">Let’s work together</h1>
+        <h1 className="text-5xl font-normal p-2 mb-2">Let’s work together</h1>
 
         {/* Form */}
         <form className="space-y-4">
