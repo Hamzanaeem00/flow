@@ -60,7 +60,7 @@ const options = { loop: true }
   return (
     <>
    
-    <div className="embla max-w-[85vw] mt-20 mx-auto " id='blog'>
+    <div className="embla max-w-[85vw] mt-20  mx-auto " id='blog'>
     <div className='  text-pink-500 font-medium text-center'>    
         Insider and Trends*
     </div>
