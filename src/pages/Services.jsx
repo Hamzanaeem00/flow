@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import Button from "../components/Button";
 import ImageSection from "../components/ImageSection";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger plugin
 
@@ -48,6 +49,11 @@ const items = [
 ];
 
 const Services = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+  console.log(isMobile);
+
   const [activePanel, setActivePanel] = useState(null);
 
   // Refs for sections
@@ -55,36 +61,39 @@ const Services = () => {
   const collapseSectionRef = useRef(null);
 
   useEffect(() => {
-    // GSAP animations
-    gsap.fromTo(
-      imageSectionRef.current,
-      { x: "-100%", opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: imageSectionRef.current,
-          // start: "top 80%", // When the top of the section reaches 80% of the viewport
-        },
-      }
-    );
+    // not apply in mobile and small pad
+    if (!isMobile) {
+      // GSAP animations
+      gsap.fromTo(
+        imageSectionRef.current,
+        { x: "-100%", opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 4,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: imageSectionRef.current,
+            // start: "top 80%", // When the top of the section reaches 80% of the viewport
+          },
+        }
+      );
 
-    gsap.fromTo(
-      collapseSectionRef.current,
-      { x: "100%", opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 1,
-        // ease: "power2.out",
-        scrollTrigger: {
-          trigger: collapseSectionRef.current,
-          // start: "top 80%", // When the top of the section reaches 80% of the viewport
-        },
-      }
-    );
+      gsap.fromTo(
+        collapseSectionRef.current,
+        { x: "100%", opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 2,
+          // ease: "power2.out",
+          scrollTrigger: {
+            trigger: collapseSectionRef.current,
+            // start: "top 80%", // When the top of the section reaches 80% of the viewport
+          },
+        }
+      );
+    }
   }, []);
 
   const preventCollapse = (event) => {
@@ -97,7 +106,10 @@ const Services = () => {
   };
 
   return (
-    <div className=" max-w-[85vw] mx-auto grid grid-cols-12 gap-4" id="services">
+    <div
+      className=" max-w-[85vw] mx-auto grid grid-cols-12 gap-4"
+      id="services"
+    >
       {/* Image Section On LeftSide */}
       <div
         ref={imageSectionRef}
