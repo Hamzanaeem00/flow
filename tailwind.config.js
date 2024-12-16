@@ -20,6 +20,7 @@ export default {
         lightGray: "#EDEDED",
         // bodyColor: "#E7EBFD",
         redColor: "#FF5959",
+        inputColor: "#191919"
       },
     },
   },

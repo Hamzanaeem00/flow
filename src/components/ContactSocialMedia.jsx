@@ -6,7 +6,7 @@ import React from 'react'
 const ContactSocialMedia = () => {
   return (
     <div className=" col-span-1  ">
-    <div className="grid grid-cols-2 gap-2 max-w-lg ">
+    <div className="grid grid-cols-2 gap-2 w-full">
       {/* Instagram */}
       <div className="h-[200px] bg-black flex justify-center items-center rounded-3xl border border-gray-700">
         <FontAwesomeIcon icon={faInstagram} className= "text-4xl text-cyan-400" />
