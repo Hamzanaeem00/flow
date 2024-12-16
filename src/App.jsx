@@ -20,7 +20,7 @@ function App() {
        <Portfolio />
        <Faq />
        <EmblaCarousel   />
-       {/* <Contact /> */}
+       <Contact />  
       </div>
     </>
   )

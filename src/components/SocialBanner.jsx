@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronDownCircle, Instagram, Music } from "lucide-react";
+import {  Instagram, Music } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import emoji from "../assets/images/pink.svg";
 import here from "../assets/images/heree.png";
