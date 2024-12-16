@@ -17,8 +17,11 @@ const nextGrowthArray = [
 ];
 
 const Portfolio = () => {
-  const hereimgRef = useRef(null);
   const [isNextGrowth, setIsNextGrowth] = useState(false);
+
+  // Refs for sections
+  const hereimgRef = useRef(null);
+  const growthSectionRef = useRef(null);
 
   useEffect(() => {
     // Animation for hereimgRef
@@ -54,6 +57,37 @@ const Portfolio = () => {
     });
   }, []);
 
+  useEffect(() => {
+    // GSAP animations
+    if (isNextGrowth) {
+      gsap.fromTo(
+        growthSectionRef.current,
+        { x: "100%", opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: growthSectionRef.current,
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        growthSectionRef.current,
+        { x: "-100%", opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          scrollTrigger: {
+            trigger: growthSectionRef.current,
+          },
+        }
+      );
+    }
+  }, [isNextGrowth]);
+
   return (
     <div className="max-w-[85vw] mx-auto mt-20" id="portfoilo">
       <h2 className="text-center xs:text-left sm:text-left text-5xl xs:text-4xl sm:text-5xl font-medium mb-12 xs:mb-8 sm:mb-10">
@@ -83,25 +117,27 @@ const Portfolio = () => {
 
       <div className="grid grid-cols-12 gap-4">
         {/* Growth Section On LeftSide */}
-        <div className="flex xs:justify-center sm:justify-center col-span-5 xs:col-span-12 sm:col-span-12 md:col-span-6"> 
+        <div className="flex xs:justify-center sm:justify-center col-span-5 xs:col-span-12 sm:col-span-12 md:col-span-6">
           <div className="w-full">
             <h2 className="text-2xl xs:text-xl sm:text-1xl md:text-1xl font-medium mb-12 mt-2 xs:mb-6 xs:mt-0 sm:mb-8 sm:mt-0">
               Exponential growth
             </h2>
-            {(isNextGrowth ? nextGrowthArray : previousGrowthArray).map(
-              (item, index) => (
-                <div
-                  index={index}
-                  className={`w-[95%] border-t ${
-                    index === 2 || index === 5 ? "border-b" : ""
-                  } border-solid border-[#d9d9d9]`}
-                >
-                  <h2 className="text-xs uppercase font-medium my-4 xs:my-3 sm:my-4">
-                    {item}
-                  </h2>
-                </div>
-              )
-            )}
+            <div ref={growthSectionRef}>
+              {(isNextGrowth ? nextGrowthArray : previousGrowthArray).map(
+                (item, index) => (
+                  <div
+                    index={index}
+                    className={`w-[95%] border-t ${
+                      index === 2 || index === 5 ? "border-b" : ""
+                    } border-solid border-[#d9d9d9]`}
+                  >
+                    <h2 className="text-xs uppercase font-medium my-4 xs:my-3 sm:my-4">
+                      {item}
+                    </h2>
+                  </div>
+                )
+              )}
+            </div>
 
             <div className="flex xs:justify-center sm:justify-center mt-10 xs:mt-6 sm:mt-7">
               <Button
@@ -126,7 +162,11 @@ const Portfolio = () => {
         {/* Rectangular Image Section On RightSide */}
         <div className="col-span-7 xs:col-span-12 sm:col-span-12 md:col-span-6 xs:mt-12 sm:mt-10">
           <div className="relative">
-            <img src={girl2} className="h-[330px] w-full rounded-3xl" loading="lazy" />
+            <img
+              src={girl2}
+              className="h-[330px] w-full rounded-3xl"
+              loading="lazy"
+            />
             <Button
               text="View all"
               backgroundColor="bg-[#ffffff2e]"
