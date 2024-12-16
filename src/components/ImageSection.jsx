@@ -29,7 +29,7 @@ const ImageSection = () => {
       </div>
 
       {/* images section */}
-      <div className=" mt-2 grid grid-cols-12 w-[350px] xs:w-[300px]  ">
+      <div className=" mt-2 grid grid-cols-12   ">
         <div className="col-span-6  ">
           <img src={mobile} className="image-circle" loading="lazy" />
           <img src={instagram} className="image-circle" loading="lazy" />
