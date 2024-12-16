@@ -420,3 +420,8 @@ body {
     transform: translate3d(100%, 0, 0);
   }
 }
+
+
+.ant-collapse{
+  font-family: "Inter" !important;
+}
