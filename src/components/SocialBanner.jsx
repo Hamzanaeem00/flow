@@ -80,12 +80,12 @@ const SocialBanner = () => {
           <div className="xs:hidden sm:hidden col-span-8 lg:col-span-9 md:col-span-12 sm:col-span-12 xs:col-span-12 ">
             {/* Icons  */}
             <div className="icon flex ">
-              <div className="bg-lightGray hover:bg-black hover:scale-125  transition duration-150 ease-in-out  text-white flex items-center justify-center rounded-full w-20 h-20">
+              <div className="bg-lightGray hover:scale-125 transition duration-150 ease-in-out text-white flex items-center justify-center rounded-full w-20 h-20">
                 {/* TikTok Icon (use any SVG or library like Font Awesome) */}
-                <Music className="w-8 h-8 text-black hover:text-white" />
+                <Music className="w-8 h-8 text-black" />
               </div>
-              <div className="bg-lightGray hover:bg-black hover:scale-125 hover:text-white  transition duration-150 ease-in-out text-white flex items-center justify-center rounded-full w-20 h-20">
-                <Instagram className="w-8 h-8 text-black hover:text-white" />
+              <div className="bg-black hover:scale-125  transition duration-150 ease-in-out text-white flex items-center justify-center rounded-full w-20 h-20">
+                <Instagram className="w-8 h-8 text-lightGray" />
                 {/* Instagram Icon */}
               </div>
               <div>
@@ -137,7 +137,7 @@ const SocialBanner = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className=" bg-punk bg-aqua p-5  rounded-full "
+                  className="bg-punk bg-aqua p-5 rounded-full "
                 >
                   <path
                     fill-rule="evenodd"
@@ -163,7 +163,7 @@ const SocialBanner = () => {
                     <span
                       className="absolute inset-0 -top-2 -left-5 w-full h-full  rounded-full z-[-1]"
                       style={{
-                        transform: "rotate(-12deg)",
+                        transform: "rotate(-5deg)",
                       }}
                     >
                       <img
@@ -172,7 +172,7 @@ const SocialBanner = () => {
                         src={here}
                         alt="Animated"
                         style={{
-                          maxWidth: "250px",
+                          maxWidth: "180px",
                         }}
                       />
                     </span>
@@ -196,12 +196,12 @@ const SocialBanner = () => {
 
           <div className="hidden xs:block sm:block sm:col-span-12 xs:col-span-12 sm:text-5xl xs:text-3xl mb-5">
             <div className="flex justify-center mb-5">
-              <div className="bg-lightGray   hover:bg-black hover:scale-125  transition duration-150 ease-in-out  text-white flex items-center justify-center rounded-full w-20 h-20">
+              <div className="bg-lightGray   hover:scale-125  transition duration-150 ease-in-out  text-white flex items-center justify-center rounded-full w-20 h-20">
                 {/* TikTok Icon (use any SVG or library like Font Awesome) */}
-                <Music className="w-8 h-8 text-black hover:text-white" />
+                <Music className="w-8 h-8 text-black" />
               </div>
-              <div className="bg-lightGray hover:bg-black hover:scale-125 hover:text-white  transition duration-150 ease-in-out text-white flex items-center justify-center rounded-full w-20 h-20">
-                <Instagram className="w-8 h-8 text-black hover:text-white" />
+              <div className="bg-black hover:scale-125 transition duration-150 ease-in-out text-white flex items-center justify-center rounded-full w-20 h-20">
+                <Instagram className="w-8 h-8 text-lightGray" />
                 {/* Instagram Icon */}
               </div>
             </div>
@@ -268,9 +268,9 @@ const SocialBanner = () => {
                 here!
                 {/* Pink oval */}
                 <span
-                  className="absolute inset-0 -top-2 -left-5 w-full h-full  rounded-full z-[-1]"
+                  className="absolute inset-0 -top-0 lg:-top-6 -left-5 lg:-left-8 w-full h-full  rounded-full z-[-1]"
                   style={{
-                    transform: "rotate(-6deg)",
+                    transform: "rotate(-4deg)",
                   }}
                 >
                   <img
@@ -279,7 +279,7 @@ const SocialBanner = () => {
                     src={here}
                     alt="Animated"
                     style={{
-                      maxWidth: "250px",
+                      maxWidth: "220px",
                     }}
                   />
                 </span>
