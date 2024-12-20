@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card";
 import Accordion from "./Accordian";
 
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Achievements = () => {
@@ -48,12 +49,12 @@ const Achievements = () => {
     { stat: "10,000+", description: "Created campaigns", number: "/01" },
     { stat: "98%", description: "Brand growth", number: "/02" },
     { stat: "160,000", description: "Satisfied customers", number: "/03" },
-    { stat: "19", description: "Years on the market", number: "/04" },
+    { stat: "19", description: "Years on the market", number: "/04", isLastCard: true  },
   ];
 
   return (
     <div className="max-w-[85vw] mx-auto px-6 py-10">
-      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-2 lg:gap-3 xl:gap-2 2xl:gap-2">
+      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-2 lg:gap-3 xl:gap-2 2xl:gap-2 relative">
         {cardsData.map((card, index) => (
           <div
             key={index}
@@ -63,6 +64,7 @@ const Achievements = () => {
               stat={card.stat}
               description={card.description}
               number={card.number}
+              isLastCard={card.isLastCard}
             />
           </div>
         ))}
