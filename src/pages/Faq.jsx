@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import faq from "../assets/images/faq.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {  faPlus, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 
 const Faq = () => {
@@ -62,11 +64,11 @@ const Faq = () => {
               >
                 <h2 className=" lg:text-normal xs:tex-sm  ">{item.title}</h2>
                 <span
-                  className={`text-2xl transition-transform duration-300 ${
-                    activeIndex === index ? " transition-all duration-[300ms] ease-in-out text-pink-500" : "transition-all duration-[300ms] ease-in-out"
+                  className={`text-2xl  transition-transform duration-300 ${
+                    activeIndex === index ? " transition-all duration-[300ms] ease-in-out " : "transition-all duration-[300ms] ease-in-out"
                   }`}
                 >
-                  {activeIndex === index ? "✖" : "+"}
+                  {activeIndex === index ? <FontAwesomeIcon className="text-gray-500" icon={faXmark} /> : <FontAwesomeIcon className="text-gray-500" icon={faPlus} />}
                 </span>
               </div>
               <div
