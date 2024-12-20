@@ -14,14 +14,14 @@ const ContactForm = () => {
             <input
               type="text"
               placeholder="FULL NAME"
-              className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
+              className="w-full text-xs h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
                outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
               "
             />
             <input
               type="email"
               placeholder="EMAIL"
-              className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
+              className="w-full h-[53px] text-xs bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
                outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
               "
             />
@@ -31,7 +31,7 @@ const ContactForm = () => {
           <input
             placeholder="MESSAGE"
             rows="4"
-            className="w-full min-h-[110px] bg-inputColor text-white p-3 rounded-2xl
+            className="w-full text-xs min-h-[110px] bg-inputColor text-white p-3 rounded-2xl
              placeholder-gray-400 focus:outline-none 
              outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
              "
