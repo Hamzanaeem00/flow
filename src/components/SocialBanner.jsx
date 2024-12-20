@@ -220,7 +220,7 @@ const SocialBanner = () => {
               src={emoji}
               alt="Animated emoji"
               ref={imgRef}
-              style={{ width: "160px", opacity: 0 }} // Initial opacity for smooth animation
+              style={{ width: "160px", opacity: 0 , filter: "contrast(2.5)"}} // Initial opacity for smooth animation
             />
             <svg
               style={{
@@ -268,7 +268,7 @@ const SocialBanner = () => {
                 here!
                 {/* Pink oval */}
                 <span
-                  className="absolute inset-0 -top-0 lg:-top-6 -left-5 lg:-left-8 w-full h-full  rounded-full z-[-1]"
+                  className="absolute inset-0  w-full h-full  rounded-full z-[-1]"
                   style={{
                     transform: "rotate(-4deg)",
                   }}
@@ -279,7 +279,11 @@ const SocialBanner = () => {
                     src={here}
                     alt="Animated"
                     style={{
-                      maxWidth: "220px",
+                      maxWidth: "260px",
+                      position: "absolute",
+                      top: "-18px",
+                      left: "-30px",
+                    
                     }}
                   />
                 </span>
