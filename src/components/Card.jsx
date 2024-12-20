@@ -1,5 +1,5 @@
 import React from "react";
-import cardhover from "../assets/images/cardhoverr.svg";
+import cardhover from "../assets/images/cardImg.svg";
 
 const Card = ({ stat, description, number, isLastCard }) => {
   return (
@@ -10,9 +10,9 @@ const Card = ({ stat, description, number, isLastCard }) => {
   
             <img
             src={isLastCard? cardhover : "" }
-            maxWidth="180px"
+            width="220px"
             alt=""
-            className=' absolute top-[-90px] right-[0px] z-10 sm:hidden xs:hidden md:hidden'
+            className=' absolute top-[-100px] right-[0px] z-10 sm:hidden xs:hidden md:hidden'
           />
 
         

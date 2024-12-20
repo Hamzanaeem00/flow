@@ -1,7 +1,7 @@
 import { Instagram, Music } from "lucide-react";
 import React, { useEffect, useRef } from "react";
-import emoji from "../assets/images/pink.svg";
-import here from "../assets/images/heree.png";
+import emoji from "../assets/images/pinkk.svg";
+import here from "../assets/images/hereCircle.svg";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Video from "./Video";
@@ -220,7 +220,7 @@ const SocialBanner = () => {
               src={emoji}
               alt="Animated emoji"
               ref={imgRef}
-              style={{ width: "160px", opacity: 0 , filter: "contrast(2.5)"}} // Initial opacity for smooth animation
+              style={{ width: "160px", opacity: 0 }} // Initial opacity for smooth animation
             />
             <svg
               style={{

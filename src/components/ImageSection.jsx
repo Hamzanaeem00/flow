@@ -6,7 +6,7 @@ import face3 from "../assets/images/face3.jpg";
 import mobile from "../assets/images/mobile.jpg";
 import instagram from "../assets/images/instagram.jpg";
 import girl1 from "../assets/images/girl1.jpg";
-import service from "../assets/images/serviceImg.png";
+import service from "../assets/images/serviceImg.svg";
 
 
 const ImageSection = () => {
