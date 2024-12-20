@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinimize, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Accordion = () => {
   // State to track which item is open
@@ -38,7 +40,7 @@ const Accordion = () => {
                 activeIndex === index ? " text-pink-500" : ""
               }`}
             >
-              {activeIndex === index ? "_" : "+"}
+              {activeIndex === index ? <FontAwesomeIcon className="text-gray-500 text-lg"  icon={faMinus} /> : <FontAwesomeIcon className="text-gray-500 text-lg" icon={faPlus} />}
             </span>
           </div>
           {/* Content */}
