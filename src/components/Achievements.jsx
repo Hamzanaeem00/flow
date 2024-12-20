@@ -45,15 +45,15 @@ const Achievements = () => {
   }, []);
 
   const cardsData = [
-    { stat: "10,000+", description: "Created campaigns", number: "01" },
-    { stat: "98%", description: "Brand growth", number: "02" },
-    { stat: "160,000", description: "Satisfied customers", number: "03" },
-    { stat: "19", description: "Years on the market", number: "04" },
+    { stat: "10,000+", description: "Created campaigns", number: "/01" },
+    { stat: "98%", description: "Brand growth", number: "/02" },
+    { stat: "160,000", description: "Satisfied customers", number: "/03" },
+    { stat: "19", description: "Years on the market", number: "/04" },
   ];
 
   return (
     <div className="max-w-[85vw] mx-auto px-6 py-10">
-      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-6">
+      <div className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 gap-2 lg:gap-3 xl:gap-2 2xl:gap-2">
         {cardsData.map((card, index) => (
           <div
             key={index}
