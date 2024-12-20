@@ -232,7 +232,7 @@ const SocialBanner = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="bg-punk bg-aqua lg:p-3 xl:p-4 2xl:p-4 h-[70px]  rounded-full"
+              className="bg-punk bg-aqua lg:p-3 xl:p-4 2xl:p-4 h-[50px]  rounded-full"
             >
               <path
                 fillRule="evenodd"

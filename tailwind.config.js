@@ -14,6 +14,9 @@ export default {
         'xl': { 'min': '1366px', 'max': '1600px' }, // Extra large screens (e.g., desktops)
         '2xl': { 'min': '1601px' }, // Ultra-wide screens (e.g., large monitors)
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+      },
       colors: {
         aqua: "#49F7F3",
         white: "#FFFFFF",
