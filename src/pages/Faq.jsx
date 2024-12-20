@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import faq from "../assets/images/faq.svg";
 
+
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -32,8 +33,14 @@ const Faq = () => {
     },
   ];
 
+
+
   const toggleAccordion = (index) => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  const handleCollapseChange = (key) => {
+    setActiveKey(key);
   };
 
   return (
@@ -49,7 +56,6 @@ const Faq = () => {
               key={index}
               className="border-t border-gray-300 first:border-t-0 py-4"
             >
-              {/* Question */}
               <div
                 className="flex justify-between items-center cursor-pointer hover:text-pink-500"
                 onClick={() => toggleAccordion(index)}
@@ -57,15 +63,14 @@ const Faq = () => {
                 <h2 className=" lg:text-normal xs:tex-sm  ">{item.title}</h2>
                 <span
                   className={`text-2xl transition-transform duration-300 ${
-                    activeIndex === index ? " text-pink-500" : ""
+                    activeIndex === index ? " transition-all duration-[300ms] ease-in-out text-pink-500" : "transition-all duration-[300ms] ease-in-out"
                   }`}
                 >
                   {activeIndex === index ? "✖" : "+"}
                 </span>
               </div>
-              {/* Content */}
               <div
-                className={`overflow-hidden transition-all duration-[1000ms] ease-in-out flex justify-end transform ${
+                className={`overflow-hidden transition-all duration-[300ms] ease-in-out flex justify-end transform ${
                   activeIndex === index
                     ? "mt-10 opacity-100 translate-y-0"
                     : "max-h-0 opacity-0 -translate-y-5"
@@ -77,6 +82,7 @@ const Faq = () => {
               </div>
             </div>
           ))}
+        
         </div>
       </div>
     </div>
@@ -84,3 +90,4 @@ const Faq = () => {
 };
 
 export default Faq;
+
