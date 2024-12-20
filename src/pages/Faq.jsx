@@ -48,7 +48,7 @@ const Faq = () => {
       <div className="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-1 xs:grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="col-span-1">
           <h1 className="text-4xl font-bold text-left">FAQs</h1>
-          <img src={faq} alt="" style={{ height: "500px" }} loading="lazy" />
+          <img src={faq} alt="" style={{ height: "500px", filter: "contrast(1.2)"}} loading="lazy" />
         </div>
         <div className="col-span-2">
           {faqData.map((item, index) => (
