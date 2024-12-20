@@ -13,14 +13,14 @@ const ContactForm = () => {
           <div className="grid grid-cols-2  lg:grid-cols-2 sm-grid-cols-2 xs:grid-cols-2 md:grid-cols-2 gap-6">
             <input
               type="text"
-              placeholder="Full name"
+              placeholder="FULL NAME"
               className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
                outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
               "
             />
             <input
               type="email"
-              placeholder="Email"
+              placeholder="EMAIL"
               className="w-full h-[53px] bg-inputColor text-white p-3 rounded-lg placeholder-gray-400 focus:outline-none
                outline-none focus:ring-1 focus:ring-accent  placeholder:font-light
               "
@@ -29,7 +29,7 @@ const ContactForm = () => {
 
           {/* Message */}
           <input
-            placeholder="Message"
+            placeholder="MESSAGE"
             rows="4"
             className="w-full min-h-[110px] bg-inputColor text-white p-3 rounded-2xl
              placeholder-gray-400 focus:outline-none 
