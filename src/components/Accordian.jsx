@@ -25,7 +25,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className=" mx-auto p-6">
+    <div className=" mx-auto mt-10">
       {/* Accordion List */}
       {accordionData.map((item, index) => (
         <div key={index} className="border-b border-gray-300">
@@ -57,7 +57,7 @@ const Accordion = () => {
       ))}
 
       {/* Button at the Bottom */}
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-10">
         <Button
           text="Learn more"
           backgroundColor="bg-black"

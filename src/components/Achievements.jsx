@@ -72,7 +72,7 @@ const Achievements = () => {
         ))}
       </div>
        {/* Text Section */}
-       <div className="mt-6 text-center max-w-4xl mx-auto relative">
+       <div className="mt-10 text-center max-w-4xl mx-auto relative">
         <p className="text-2xl lg:text-2xl leading-relaxed">
           We are a team of professionals dedicated to the art of <br />{" "}
           <span className="relative">social media</span> <span

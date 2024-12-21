@@ -89,16 +89,17 @@ const Portfolio = () => {
   }, [isNextGrowth]);
 
   return (
-    <div className="max-w-[85vw] mx-auto mt-20" id="portfoilo">
-      <h2 className="text-center xs:text-left sm:text-left text-5xl xs:text-4xl sm:text-5xl font-medium mb-12 xs:mb-8 sm:mb-10">
+    <div className="max-w-[85vw] mx-auto mt-40" id="portfoilo">
+      <h2 className="text-center xs:text-left sm:text-left text-5xl xs:text-4xl sm:text-5xl font-normal mb-12 xs:mb-8 sm:mb-10">
         We turn{" "}
         <span className="relative inline-block">
           ideas
           {/* Pink oval */}
           <span
-            className="absolute inset-0 -top-1 -left-3 xs:-top-6 xs:-left-6 sm:-top-3 sm:-left-5 w-full h-full rounded-full z-[-1]"
+            className="absolute inset-0 -top-3 xs:-top-6 xs:-left-6 sm:-top-3 sm:-left-5 w-full h-full rounded-full z-[-1]"
             style={{
-              transform: "rotate(-1deg)",
+              transform: "rotate(8deg)",
+              
             }}
           >
             <img
