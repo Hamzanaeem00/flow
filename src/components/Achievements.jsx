@@ -72,10 +72,10 @@ const Achievements = () => {
         ))}
       </div>
        {/* Text Section */}
-       <div className="mt-10 text-center max-w-4xl mx-auto relative">
-        <p className="text-2xl lg:text-2xl leading-relaxed">
+       <div className="mt-10 text-center max-w-2xl mx-auto relative">
+        <p className="text-2xl lg:text-2xl leading-relaxed ">
           We are a team of professionals dedicated to the art of <br />{" "}
-          <span className="relative">social media</span> <span
+          <span className="relative">social media.</span> <span
                             className="absolute inset-0  w-full h-full  rounded-full z-[-1]"
                            
                           >
@@ -88,14 +88,14 @@ const Achievements = () => {
                                 maxWidth: "160px",
                                 position: "absolute",
                                 top: "20px",
-                                left: "0px",
+                                left: "-8px",
                               transform: "rotate(9deg)",
 
                               
                               }}
                             />
-                          </span>.{" "}
-          We turn ideas into reality, building impressive online stories and
+                          </span>{" "}
+          We turn ideas into reality, building impressive  <br /> online stories and
           ensuring rapid growth of your brand.
         </p>
       </div>
