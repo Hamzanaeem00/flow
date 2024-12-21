@@ -73,19 +73,20 @@ const Achievements = () => {
       </div>
        {/* Text Section */}
        <div className="mt-10 text-center max-w-2xl mx-auto relative">
-        <p className="text-2xl lg:text-2xl leading-relaxed ">
+        <p className="text-2xl lg:text-2xl sm:text-xl leading-relaxed ">
           We are a team of professionals dedicated to the art of <br />{" "}
           <span className="relative">social media.</span> <span
                             className="absolute inset-0  w-full h-full  rounded-full z-[-1]"
                            
                           >
                             <img
+                             className="sm:hidden xs:hidden "
                               loading="lazy"
                               // ref={hereimgRef}
                               src={here}
                               alt="Animated"
                               style={{
-                                maxWidth: "160px",
+                                width: "160px",
                                 position: "absolute",
                                 top: "20px",
                                 left: "-8px",
