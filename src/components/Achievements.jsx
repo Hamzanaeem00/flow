@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card";
 import Accordion from "./Accordian";
+import here from "../assets/images/hereCircle.svg";
+
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -73,7 +75,26 @@ const Achievements = () => {
        <div className="mt-6 text-center max-w-4xl mx-auto relative">
         <p className="text-2xl lg:text-2xl leading-relaxed">
           We are a team of professionals dedicated to the art of <br />{" "}
-          <span className="relative underline text-pink-500">social media</span>.{" "}
+          <span className="relative">social media</span> <span
+                            className="absolute inset-0  w-full h-full  rounded-full z-[-1]"
+                           
+                          >
+                            <img
+                              loading="lazy"
+                              // ref={hereimgRef}
+                              src={here}
+                              alt="Animated"
+                              style={{
+                                maxWidth: "160px",
+                                position: "absolute",
+                                top: "20px",
+                                left: "0px",
+                              transform: "rotate(9deg)",
+
+                              
+                              }}
+                            />
+                          </span>.{" "}
           We turn ideas into reality, building impressive online stories and
           ensuring rapid growth of your brand.
         </p>
