@@ -5,8 +5,6 @@ import Card from "./Card";
 import Accordion from "./Accordian";
 import here from "../assets/images/hereCircle.svg";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 const Achievements = () => {
@@ -40,7 +38,6 @@ const Achievements = () => {
                 }
               );
             },
-
           },
         }
       );
@@ -51,7 +48,12 @@ const Achievements = () => {
     { stat: "10,000+", description: "Created campaigns", number: "/01" },
     { stat: "98%", description: "Brand growth", number: "/02" },
     { stat: "160,000", description: "Satisfied customers", number: "/03" },
-    { stat: "19", description: "Years on the market", number: "/04", isLastCard: true  },
+    {
+      stat: "19",
+      description: "Years on the market",
+      number: "/04",
+      isLastCard: true,
+    },
   ];
 
   return (
@@ -71,33 +73,29 @@ const Achievements = () => {
           </div>
         ))}
       </div>
-       {/* Text Section */}
-       <div className="mt-10 text-center max-w-2xl mx-auto relative">
+      {/* Text Section */}
+      <div className="mt-10 text-center max-w-2xl mx-auto relative">
         <p className="text-2xl lg:text-2xl sm:text-xl leading-relaxed ">
           We are a team of professionals dedicated to the art of <br />{" "}
-          <span className="relative">social media.</span> <span
-                            className="absolute inset-0  w-full h-full  rounded-full z-[-1]"
-                           
-                          >
-                            <img
-                             className="sm:hidden xs:hidden "
-                              loading="lazy"
-                              // ref={hereimgRef}
-                              src={here}
-                              alt="Animated"
-                              style={{
-                                width: "160px",
-                                position: "absolute",
-                                top: "20px",
-                                left: "-8px",
-                              transform: "rotate(9deg)",
-
-                              
-                              }}
-                            />
-                          </span>{" "}
-          We turn ideas into reality, building impressive  <br /> online stories and
-          ensuring rapid growth of your brand.
+          <span className="relative">social media.</span>{" "}
+          <span className="absolute inset-0  w-full h-full  rounded-full z-[-1]">
+            <img
+              className="sm:hidden xs:hidden "
+              loading="lazy"
+              // ref={hereimgRef}
+              src={here}
+              alt="Animated"
+              style={{
+                width: "160px",
+                position: "absolute",
+                top: "20px",
+                left: "-8px",
+                transform: "rotate(9deg)",
+              }}
+            />
+          </span>{" "}
+          We turn ideas into reality, building impressive <br /> online stories
+          and ensuring rapid growth of your brand.
         </p>
       </div>
 
