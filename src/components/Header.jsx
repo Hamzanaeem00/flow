@@ -116,7 +116,7 @@ export default function Header() {
       </section>
       {/* Mobile View Section */}
       <div
-        className="hidden mobile-navigation pt-4 pb-1 pl-4 border-b fixed top-0 w-full bg-black"
+        className="hidden mobile-navigation pt-4 pb-1 pl-4 fixed top-0 w-full bg-black"
         style={{ zIndex: "1000" }}
       >
         <FontAwesomeIcon
@@ -128,7 +128,7 @@ export default function Header() {
       {isOpen && (
         <section className="w-full flex justify-center items-center">
           <nav
-            className={`fixed top-[60px] w-[50vh] mx-10 h-[80vh] pt-10 rounded-lg transition-all duration-300 nav-bar
+            className={`fixed top-[60px] xs:top-[40px] sm:top-[50px] w-[50vh] mx-10 h-[80vh] pt-10 rounded-lg transition-all duration-300 nav-bar
             ${isScrolled ? "bg-black/80" : "bg-black"}`}
           >
             <div className=" px-2 sm:px-2 w-full">
