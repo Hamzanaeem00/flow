@@ -4,43 +4,50 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card";
 import Accordion from "./Accordian";
 import here from "../assets/images/hereCircle.svg";
+import { useMediaQuery } from "react-responsive";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Achievements = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 768px)",
+  });
+
   const cardsRef = useRef([]);
 
   useEffect(() => {
     cardsRef.current.forEach((card, index) => {
-      gsap.fromTo(
-        card,
-        { y: -100, opacity: 1 }, // Start position: above the viewport
-        {
-          y: 0,
-          opacity: 1,
-          duration: 2,
-          ease: "bounce.out",
-          scrollTrigger: {
-            trigger: card, // Each card triggers its own animation
-            start: "top 90%", // Start animation when the card is 90% down the viewport
-            end: "bottom 10%", // Define when the animation ends
-            // toggleActions: "play none none none", // Animation only plays once
-            onEnter: () => {
-              // Trigger when scrolling into view
-              gsap.fromTo(
-                card,
-                { y: -100, opacity: 1 }, // Start position
-                {
-                  y: 0,
-                  opacity: 1,
-                  duration: 2,
-                  ease: "bounce.out",
-                }
-              );
+      if (!isMobile) {
+        gsap.fromTo(
+          card,
+          { y: -100, opacity: 1 }, // Start position: above the viewport
+          {
+            y: 0,
+            opacity: 1,
+            duration: 2,
+            ease: "bounce.out",
+            scrollTrigger: {
+              trigger: card, // Each card triggers its own animation
+              start: "top 90%", // Start animation when the card is 90% down the viewport
+              end: "bottom 10%", // Define when the animation ends
+              // toggleActions: "play none none none", // Animation only plays once
+              onEnter: () => {
+                // Trigger when scrolling into view
+                gsap.fromTo(
+                  card,
+                  { y: -100, opacity: 1 }, // Start position
+                  {
+                    y: 0,
+                    opacity: 1,
+                    duration: 2,
+                    ease: "bounce.out",
+                  }
+                );
+              },
             },
-          },
-        }
-      );
+          }
+        );
+      }
     });
   }, []);
 
